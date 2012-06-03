@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="tRA-a0-R8G">
+                                <rect key="frame" x="20" y="20" width="440" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="fq1-KS-cem">
+                                        <rect key="frame" x="0.0" y="39" width="141" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Scene" lineBreakMode="tailTruncation" minimumFontSize="10" id="god-nv-WsD">
+                                                <rect key="frame" x="2" y="2" width="49" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="18" id="xPc-xh-NAZ">
+                                                <rect key="frame" x="0.0" y="24" width="141" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="K0u-cK-QtO" appends="YES" id="sTd-pT-Y0i"/>
+                                            <outletCollection property="gestureRecognizers" destination="p0u-vi-G8M" appends="YES" id="4A5-FU-xgH"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="MqF-QJ-qdI">
+                                        <rect key="frame" x="149" y="39" width="142" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Take" lineBreakMode="tailTruncation" minimumFontSize="10" id="Yaw-OY-Amb">
+                                                <rect key="frame" x="2" y="2" width="49" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="18" id="N6A-Rz-tcb">
+                                                <rect key="frame" x="0.0" y="31" width="141" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Hqq-Tt-zBP" appends="YES" id="PY7-gp-7jv"/>
+                                            <outletCollection property="gestureRecognizers" destination="Efw-UO-3gv" appends="YES" id="sLa-tD-xS8"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="KYy-4D-lwl">
+                                        <rect key="frame" x="299" y="39" width="141" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date/Time" lineBreakMode="tailTruncation" minimumFontSize="10" id="rrz-8Y-5JT">
+                                                <rect key="frame" x="2" y="2" width="79" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="01/02/2012" textAlignment="center" minimumFontSize="17" id="BYM-Yv-WFi">
+                                                <rect key="frame" x="2" y="52" width="137" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12:00" textAlignment="center" minimumFontSize="17" id="67h-jr-Hk7">
+                                                <rect key="frame" x="2" y="80" width="137" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="UW0-Jz-wuA">
+                                        <rect key="frame" x="0.0" y="188" width="291" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Audio file" lineBreakMode="tailTruncation" minimumFontSize="10" id="4d5-Yt-KRQ">
+                                                <rect key="frame" x="2" y="2" width="76" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" minimumFontSize="17" id="eMT-0C-PXY">
+                                                <rect key="frame" x="2" y="31" width="287" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="kcM-Bo-XQo" appends="YES" id="8iz-Rq-PlF"/>
+                                            <outletCollection property="gestureRecognizers" destination="xS1-mS-C1E" appends="YES" id="NPs-km-oRD"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="vuz-Pj-kSL">
+                                        <rect key="frame" x="299" y="188" width="141" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="L:" lineBreakMode="tailTruncation" minimumFontSize="10" id="Aio-kS-hfJ">
+                                                <rect key="frame" x="2" y="21" width="20" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="R:" lineBreakMode="tailTruncation" minimumFontSize="10" id="akm-Q0-rKo">
+                                                <rect key="frame" x="2" y="45" width="20" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Channels" lineBreakMode="tailTruncation" minimumFontSize="10" id="yLV-vS-e4B">
+                                                <rect key="frame" x="2" y="2" width="76" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" minimumFontSize="17" id="QNH-ib-kdh">
+                                                <rect key="frame" x="30" y="21" width="109" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" minimumFontSize="17" id="19o-Y4-Peo">
+                                                <rect key="frame" x="30" y="45" width="109" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="EQA-t0-K9l">
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Production" minimumFontSize="17" clearButtonMode="whileEditing" id="1WE-Si-hhd">
+                                                <rect key="frame" x="0.0" y="0.0" width="440" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SFc-1d-eEW" appends="YES" id="uGn-3R-3j9"/>
+                            <outletCollection property="gestureRecognizers" destination="7El-Mg-Mwo" appends="YES" id="uBe-yn-2ml"/>
+                        </connections>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="audioFileLabel" destination="4d5-Yt-KRQ" id="nTS-UZ-Cme"/>
+                        <outlet property="audioFileNameField" destination="eMT-0C-PXY" id="sL5-tT-neV"/>
+                        <outlet property="audioFileNameView" destination="UW0-Jz-wuA" id="ndW-Tt-2S3"/>
+                        <outlet property="audioLeftChannelField" destination="QNH-ib-kdh" id="bcm-gB-AfQ"/>
+                        <outlet property="audioRightChannelField" destination="19o-Y4-Peo" id="Jyq-o9-F8F"/>
+                        <outlet property="channelsLabel" destination="yLV-vS-e4B" id="hvU-eH-cFR"/>
+                        <outlet property="channelsView" destination="vuz-Pj-kSL" id="AFr-17-Eu5"/>
+                        <outlet property="currentDateField" destination="BYM-Yv-WFi" id="ZRY-Vk-Wsy"/>
+                        <outlet property="currentTimeField" destination="67h-jr-Hk7" id="vxM-8R-3Ng"/>
+                        <outlet property="dateNumberView" destination="KYy-4D-lwl" id="qMN-NX-VyQ"/>
+                        <outlet property="dateTimeLabel" destination="rrz-8Y-5JT" id="nL1-3Z-0tM"/>
+                        <outlet property="lChannelLabel" destination="Aio-kS-hfJ" id="0B0-id-DLP"/>
+                        <outlet property="productionNameField" destination="1WE-Si-hhd" id="kif-tL-v0l"/>
+                        <outlet property="productionNameView" destination="EQA-t0-K9l" id="83a-5D-lCc"/>
+                        <outlet property="rChannelLabel" destination="akm-Q0-rKo" id="wGJ-QW-EXS"/>
+                        <outlet property="sceneLabel" destination="god-nv-WsD" id="b7C-S1-NUT"/>
+                        <outlet property="sceneNumberField" destination="xPc-xh-NAZ" id="wuG-fM-OHZ"/>
+                        <outlet property="sceneNumberView" destination="fq1-KS-cem" id="qFz-rW-Xfq"/>
+                        <outlet property="scrollContainer" destination="tRA-a0-R8G" id="VHK-5l-BPc"/>
+                        <outlet property="takeLabel" destination="Yaw-OY-Amb" id="2t4-1A-55N"/>
+                        <outlet property="takeNumberField" destination="N6A-Rz-tcb" id="Bbn-eL-pfc"/>
+                        <outlet property="takeNumberView" destination="MqF-QJ-qdI" id="tg3-p4-V8K"/>
+                    </connections>
+                </viewController>
+                <swipeGestureRecognizer direction="up" id="p0u-vi-G8M">
+                    <connections>
+                        <action selector="handleUpSwipe:" destination="2" id="Zqd-Nj-ts8"/>
+                        <outlet property="delegate" destination="2" id="IwP-aW-SXB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="Hqq-Tt-zBP">
+                    <connections>
+                        <action selector="handleUpSwipe:" destination="2" id="GmW-jr-job"/>
+                        <outlet property="delegate" destination="2" id="9eQ-b4-vvT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="kcM-Bo-XQo">
+                    <connections>
+                        <action selector="handleUpSwipe:" destination="2" id="5It-Tc-eZw"/>
+                        <outlet property="delegate" destination="2" id="KoV-bg-C2S"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="K0u-cK-QtO">
+                    <connections>
+                        <action selector="handleDownSwipe:" destination="2" id="HIm-LB-Jlf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Efw-UO-3gv">
+                    <connections>
+                        <action selector="handleDownSwipe:" destination="2" id="hch-bo-6Kb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="xS1-mS-C1E">
+                    <connections>
+                        <action selector="handleDownSwipe:" destination="2" id="vle-Lu-xBm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="SFc-1d-eEW">
+                    <connections>
+                        <action selector="handleSideSwipe:" destination="2" id="TEz-iW-YNk"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="7El-Mg-Mwo"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="handleDownSwipe:"/>
+                <relationship kind="action" name="handleSideSwipe:"/>
+                <relationship kind="action" name="handleUpSwipe:"/>
+                <relationship kind="outlet" name="audioFileLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="audioFileNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="audioFileNameView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="audioLeftChannelField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="audioRightChannelField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="channelsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="channelsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="currentDateField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="currentTimeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dateNumberView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="dateTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lChannelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="productionNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="productionNameView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="rChannelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sceneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sceneNumberField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sceneNumberView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="scrollContainer" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="takeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="takeNumberField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="takeNumberView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
