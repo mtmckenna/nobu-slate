@@ -8,28 +8,34 @@
 
 #import "ViewController.h"
 #import "NSTimer+Blocks.h"
+#import "SlateState.h"
 
 @implementation ViewController
 
 @synthesize countdownTimer;
+@synthesize clockTimer;
 @synthesize stoppedColor;
 @synthesize countdownColor;
 @synthesize runningColor;
 @synthesize countdownDurationInSeconds;
-@synthesize productionName;
-@synthesize audioFileName;
-@synthesize sceneNumber;
-@synthesize takeNumber;
-@synthesize audioLeftChannel;
-@synthesize audioRightChannel;
+//@synthesize productionName;
+//@synthesize audioFileName;
+//@synthesize sceneNumber;
+//@synthesize takeNumber;
+//@synthesize audioLeftChannel;
+//@synthesize audioRightChannel;
 @synthesize fieldArray;
+
 @synthesize managedObjectContext;
+@synthesize slateState;
 
 long MIN = 60;
 
 AVAudioPlayer *audioPlayerPulse;
 AVAudioPlayer *audioPlayerFinished;
 UITextField *activeTextField;
+
+BOOL didAttemptStateInitialization = NO;
 
 #pragma mark - Countdown methods
 
@@ -75,7 +81,9 @@ UITextField *activeTextField;
         }        
     };
     
-    countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 block:myBlock repeats:YES];
+    self.countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 
+                                                            block:myBlock 
+                                                          repeats:YES];
     
     [self setColorsWithBackgroundColor:[UIColor blackColor] 
                              textColor:[UIColor whiteColor]
@@ -181,32 +189,74 @@ UITextField *activeTextField;
 
 - (void)updateProductionName
 {
-    productionNameField.text = productionName;
+    productionNameField.text = self.slateState.productionName;
+    [self saveContext];
 }
 
 - (void)updateSceneNumber
 {
-    sceneNumberField.text = [NSString stringWithFormat:@"%d", sceneNumber];
+    sceneNumberField.text = [NSString stringWithFormat:@"%d", 
+                             [self.slateState.sceneNumber intValue]];
+    [self saveContext];
+
 }
 
 - (void)updateTakeNumber
 {
-    takeNumberField.text = [NSString stringWithFormat:@"%d", takeNumber];
+    takeNumberField.text = [NSString stringWithFormat:@"%d", 
+                            [self.slateState.takeNumber intValue]];
+    [self saveContext];
 }
 
 - (void)updateAudioFileName
 {
-    audioFileNameField.text = audioFileName;
+    audioFileNameField.text = self.slateState.audioFileName;
+    [self saveContext];
 }
 
 - (void)updateAudioLeftChannel
 {
-    audioLeftChannelField.text = audioLeftChannel;
+    audioLeftChannelField.text = self.slateState.audioLeftChannel;
+    [self saveContext];
 }
 
 - (void)updateAudioRightChannel
 {
-    audioRightChannelField.text = audioRightChannel;
+    audioRightChannelField.text = self.slateState.audioRightChannel;
+    [self saveContext];
+}
+
+#pragma mark - Handle Core Data
+
+- (void)populateModels
+{    
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"SlateState" inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    NSError *error;
+
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    // TODO: Better error handling
+    if ([objects count] == 0 && didAttemptStateInitialization)
+    {
+        NSLog(@"Error: populateModels unable to create Core Data entity.");
+        return;
+    }
+    
+    if ([objects count] == 0) {
+        NSLog(@"No matches!");
+        
+        self.slateState = [NSEntityDescription insertNewObjectForEntityForName:@"SlateState" 
+                                                                    inManagedObjectContext:self.managedObjectContext];
+        
+        //[self saveContext];
+        [self populateModels];
+        
+    } else {
+        self.slateState = [objects objectAtIndex:0];
+        NSLog(@"Matches out the wazoo!");
+    }
 }
 
 #pragma mark - UIControl delegate methods
@@ -217,32 +267,49 @@ UITextField *activeTextField;
     activeTextField = textField;
 }
 
+- (void)saveContext
+{
+    NSError *error = nil;
+    if (self.managedObjectContext != nil) {
+        if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        } 
+    }
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     if (textField == productionNameField)
     {
-        productionName = productionNameField.text;
+        self.slateState.productionName = productionNameField.text;
     }
     else if (textField == sceneNumberField)
     {
-        sceneNumber = [sceneNumberField.text intValue];
+        self.slateState.sceneNumber = 
+        [NSNumber numberWithInt:[sceneNumberField.text intValue]];
     }
     else if (textField == takeNumberField)
     {
-        takeNumber = [takeNumberField.text intValue];
+        self.slateState.takeNumber = 
+        [NSNumber numberWithInt:[takeNumberField.text intValue]];
     }
     else if (textField == audioFileNameField)
     {
-        audioFileName = audioFileNameField.text;
+        self.slateState.audioFileName = audioFileNameField.text;
     }
     else if (textField == audioLeftChannelField)
     {
-        audioLeftChannel = audioLeftChannelField.text;
+        self.slateState.audioLeftChannel = audioLeftChannelField.text;
     }
     else if (textField == audioRightChannelField)
     {
-        audioRightChannel = audioRightChannelField.text;
+        self.slateState.audioRightChannel = audioRightChannelField.text;
     }
+    
+    [self saveContext];
     
     activeTextField = nil;
 }
@@ -269,20 +336,21 @@ UITextField *activeTextField;
 
     if (touchedView == sceneNumberView)
     {
-        sceneNumber += 1;
+        int value = [self.slateState.sceneNumber intValue] + 1;
+        self.slateState.sceneNumber = [NSNumber numberWithInt:value];
         [self updateSceneNumber];
     }
     else if (touchedView == takeNumberView)
     {
-        takeNumber += 1;
+        int value = [self.slateState.takeNumber intValue] + 1;
+        self.slateState.takeNumber = [NSNumber numberWithInt:value];        
         [self updateTakeNumber];
     }
     else if (touchedView == audioFileNameView)
     {
         // TODO: add ability to parse field with file extension
-        int fileNumber = [audioFileName intValue] + 1;
-        
-        audioFileName = [NSString stringWithFormat:@"%03d", fileNumber];
+        int fileNumber = [self.slateState.audioFileName intValue] + 1;
+        self.slateState.audioFileName = [NSString stringWithFormat:@"%03d", fileNumber];
         [self updateAudioFileName];
     }
 }
@@ -293,19 +361,20 @@ UITextField *activeTextField;
     
     if (touchedView == sceneNumberView)
     {
-        sceneNumber -= 1;
+        int value = [self.slateState.sceneNumber intValue] - 1;
+        self.slateState.sceneNumber = [NSNumber numberWithInt:value];
         [self updateSceneNumber];
     }
     else if (touchedView == takeNumberView)
     {
-        takeNumber -= 1;
+        int value = [self.slateState.takeNumber intValue] - 1;
+        self.slateState.takeNumber = [NSNumber numberWithInt:value];
         [self updateTakeNumber];
     }
     else if (touchedView == audioFileNameView)
     {
-        int fileNumber = [audioFileName intValue] - 1;
-        
-        audioFileName = [NSString stringWithFormat:@"%03d", fileNumber];
+        int fileNumber = [self.slateState.audioFileName intValue] - 1;
+        self.slateState.audioFileName = [NSString stringWithFormat:@"%03d", fileNumber];
         [self updateAudioFileName];
     }
 }
@@ -365,6 +434,7 @@ UITextField *activeTextField;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self prepareAudioFiles];
     
     productionNameField.delegate = self;
@@ -373,7 +443,6 @@ UITextField *activeTextField;
     audioFileNameField.delegate = self;
     audioLeftChannelField.delegate = self;
     audioRightChannelField.delegate = self;
-    //countdownField.delegate = self;
     audioLeftChannelField.delegate = self;
     audioRightChannelField.delegate = self;
     self.countdownDurationInSeconds = 2;
@@ -390,19 +459,24 @@ UITextField *activeTextField;
                                                  name:UIKeyboardWillHideNotification object:nil];
     
     // This timer updates the date/time field
-    clockTimer = [NSTimer scheduledTimerWithTimeInterval:MIN target:self selector:@selector(updateDateAndTime) userInfo:nil repeats:YES];
+    self.clockTimer = [NSTimer scheduledTimerWithTimeInterval:MIN 
+                                                       target:self 
+                                                     selector:@selector(updateDateAndTime) 
+                                                     userInfo:nil 
+                                                      repeats:YES];
     
     stoppedColor = [UIColor colorWithRed:0 green:0.501961 blue:0 alpha:1];
     countdownColor = [UIColor colorWithRed:.682353 green:.682353 blue:0 alpha:1];
     runningColor = [UIColor colorWithRed:0.501961 green:0 blue:.0 alpha:1];
-    //countdownField.backgroundColor = stoppedColor;
     
-    productionName = @"Framed Baby Photos";
-    sceneNumber = 1;
-    takeNumber = 1;
-    audioFileName = @"000";
-    audioLeftChannel = @"Boom";
-    audioRightChannel = @"Lav";
+//    productionName = @"Framed Baby Photos";
+//    sceneNumber = 1;
+//    takeNumber = 1;
+//    audioFileName = @"000";
+//    audioLeftChannel = @"Boom";
+//    audioRightChannel = @"Lav";
+    [self populateModels];
+
     [self updateAudioFileName];
     [self updateAudioLeftChannel];
     [self updateAudioRightChannel];

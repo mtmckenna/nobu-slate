@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SlateState" representedClassName="SlateState" syncable="YES">
+        <attribute name="audioFileName" attributeType="String" defaultValueString="000" syncable="YES"/>
+        <attribute name="audioLeftChannel" attributeType="String" defaultValueString="Lav" syncable="YES"/>
+        <attribute name="audioRightChannel" attributeType="String" defaultValueString="Boom" syncable="YES"/>
+        <attribute name="productionName" attributeType="String" defaultValueString="Toy Story 4: Enough with the Toys" syncable="YES"/>
+        <attribute name="sceneNumber" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+        <attribute name="takeNumber" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SlateState" positionX="160" positionY="192" width="128" height="135"/>
+    </elements>
+</model>

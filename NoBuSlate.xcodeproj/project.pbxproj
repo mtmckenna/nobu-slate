@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */; };
 		C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9794B2B157333860001286C /* NSTimer+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9794B3B15735A450001286C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9794B3A15735A450001286C /* AVFoundation.framework */; };
-		C9794B3E157361080001286C /* slateState.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9794B3C157361080001286C /* slateState.xcdatamodeld */; };
 		C9A0BEA71572D033003A7062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
 		C9A0BEA91572D033003A7062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
 		C9A0BEAB1572D033003A7062 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEAA1572D033003A7062 /* CoreGraphics.framework */; };
@@ -27,6 +27,7 @@
 		C9A7DB2015772B80008899EE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7DB1F15772B80008899EE /* AudioToolbox.framework */; };
 		C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2515773B83008899EE /* countdown-finished.wav */; };
 		C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2715773B9D008899EE /* countdown-pulse.wav */; };
+		C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D340D3157C86C900F8D0E4 /* SlateState.m */; };
 		C9DD67791579E4A70024526D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DD67781579E4A70024526D /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +45,7 @@
 		C9794B2A157333860001286C /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		C9794B3D157361080001286C /* slateState.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = slateState.xcdatamodel; sourceTree = "<group>"; };
+		C9794B3D157361080001286C /* NoBuSlate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoBuSlate.xcdatamodel; sourceTree = "<group>"; };
 		C9A0BEA21572D033003A7062 /* NoBuSlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBuSlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A0BEA61572D033003A7062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9A0BEA81572D033003A7062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +69,8 @@
 		C9A7DB1F15772B80008899EE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C9A7DB2515773B83008899EE /* countdown-finished.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-finished.wav"; sourceTree = "<group>"; };
 		C9A7DB2715773B9D008899EE /* countdown-pulse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-pulse.wav"; sourceTree = "<group>"; };
+		C9D340D2157C86C900F8D0E4 /* SlateState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlateState.h; sourceTree = "<group>"; };
+		C9D340D3157C86C900F8D0E4 /* SlateState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlateState.m; sourceTree = "<group>"; };
 		C9DD67781579E4A70024526D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -120,7 +123,7 @@
 			children = (
 				C9A7DB2715773B9D008899EE /* countdown-pulse.wav */,
 				C9A7DB2515773B83008899EE /* countdown-finished.wav */,
-				C9794B3C157361080001286C /* slateState.xcdatamodeld */,
+				C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -163,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				C9794B39157359BA0001286C /* Resources */,
+				C9D340D2157C86C900F8D0E4 /* SlateState.h */,
+				C9D340D3157C86C900F8D0E4 /* SlateState.m */,
 				C9A0BEB51572D033003A7062 /* AppDelegate.h */,
 				C9A0BEB61572D033003A7062 /* AppDelegate.m */,
 				C9A0BEBE1572D033003A7062 /* ViewController.h */,
@@ -317,7 +322,8 @@
 				C9A0BEB71572D033003A7062 /* AppDelegate.m in Sources */,
 				C9A0BEC01572D034003A7062 /* ViewController.m in Sources */,
 				C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */,
-				C9794B3E157361080001286C /* slateState.xcdatamodeld in Sources */,
+				C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */,
+				C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,13 +517,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C9794B3C157361080001286C /* slateState.xcdatamodeld */ = {
+		C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C9794B3D157361080001286C /* slateState.xcdatamodel */,
+				C9794B3D157361080001286C /* NoBuSlate.xcdatamodel */,
 			);
-			currentVersion = C9794B3D157361080001286C /* slateState.xcdatamodel */;
-			path = slateState.xcdatamodeld;
+			currentVersion = C9794B3D157361080001286C /* NoBuSlate.xcdatamodel */;
+			path = NoBuSlate.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
