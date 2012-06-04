@@ -14,16 +14,9 @@
 
 @synthesize countdownTimer;
 @synthesize clockTimer;
-@synthesize stoppedColor;
-@synthesize countdownColor;
-@synthesize runningColor;
+@synthesize pulseColor;
+@synthesize goColor;
 @synthesize countdownDurationInSeconds;
-//@synthesize productionName;
-//@synthesize audioFileName;
-//@synthesize sceneNumber;
-//@synthesize takeNumber;
-//@synthesize audioLeftChannel;
-//@synthesize audioRightChannel;
 @synthesize fieldArray;
 
 @synthesize managedObjectContext;
@@ -68,7 +61,7 @@ BOOL didAttemptStateInitialization = NO;
         {
             [self setColorsWithBackgroundColor:[UIColor blackColor] 
                                      textColor:[UIColor blackColor]
-                           textBackgroundColor:self.stoppedColor];
+                           textBackgroundColor:self.pulseColor];
             
             [audioPlayerFinished play];
         }
@@ -76,7 +69,7 @@ BOOL didAttemptStateInitialization = NO;
         {
             [self setColorsWithBackgroundColor:[UIColor blackColor] 
                                      textColor:[UIColor whiteColor]
-                           textBackgroundColor:self.runningColor];
+                           textBackgroundColor:self.goColor];
             [audioPlayerPulse play]; 
         }        
     };
@@ -87,7 +80,7 @@ BOOL didAttemptStateInitialization = NO;
     
     [self setColorsWithBackgroundColor:[UIColor blackColor] 
                              textColor:[UIColor whiteColor]
-                   textBackgroundColor:self.runningColor];
+                   textBackgroundColor:self.goColor];
     [audioPlayerPulse play];
     
 }
@@ -226,7 +219,7 @@ BOOL didAttemptStateInitialization = NO;
     [self saveContext];
 }
 
-#pragma mark - Handle Core Data
+#pragma mark - Handle core data
 
 - (void)populateModels
 {    
@@ -244,18 +237,15 @@ BOOL didAttemptStateInitialization = NO;
         return;
     }
     
-    if ([objects count] == 0) {
-        NSLog(@"No matches!");
-        
+    if ([objects count] == 0) 
+    {
         self.slateState = [NSEntityDescription insertNewObjectForEntityForName:@"SlateState" 
                                                                     inManagedObjectContext:self.managedObjectContext];
-        
-        //[self saveContext];
         [self populateModels];
         
-    } else {
+    } else 
+    {
         self.slateState = [objects objectAtIndex:0];
-        NSLog(@"Matches out the wazoo!");
     }
 }
 
@@ -436,6 +426,7 @@ BOOL didAttemptStateInitialization = NO;
     [super viewDidLoad];
     
     [self prepareAudioFiles];
+    [self updateDateAndTime];
     
     productionNameField.delegate = self;
     sceneNumberField.delegate = self;
@@ -446,9 +437,7 @@ BOOL didAttemptStateInitialization = NO;
     audioLeftChannelField.delegate = self;
     audioRightChannelField.delegate = self;
     self.countdownDurationInSeconds = 2;
-    
-    [self updateDateAndTime];
-    
+        
     // Keyboard notifications
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
@@ -465,16 +454,9 @@ BOOL didAttemptStateInitialization = NO;
                                                      userInfo:nil 
                                                       repeats:YES];
     
-    stoppedColor = [UIColor colorWithRed:0 green:0.501961 blue:0 alpha:1];
-    countdownColor = [UIColor colorWithRed:.682353 green:.682353 blue:0 alpha:1];
-    runningColor = [UIColor colorWithRed:0.501961 green:0 blue:.0 alpha:1];
+    pulseColor = [UIColor colorWithRed:0 green:0.501961 blue:0 alpha:1];
+    goColor = [UIColor colorWithRed:0.501961 green:0 blue:.0 alpha:1];
     
-//    productionName = @"Framed Baby Photos";
-//    sceneNumber = 1;
-//    takeNumber = 1;
-//    audioFileName = @"000";
-//    audioLeftChannel = @"Boom";
-//    audioRightChannel = @"Lav";
     [self populateModels];
 
     [self updateAudioFileName];

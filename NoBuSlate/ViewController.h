@@ -42,18 +42,11 @@
 @property (nonatomic, strong) NSTimer *countdownTimer;
 @property (nonatomic, strong) NSTimer *clockTimer;
 
-@property (nonatomic, strong) UIColor *stoppedColor;
-@property (nonatomic, strong) UIColor *countdownColor;
-@property (nonatomic, strong) UIColor *runningColor;
+@property (nonatomic, strong) UIColor *pulseColor;
+@property (nonatomic, strong) UIColor *goColor;
 
 @property (nonatomic) int countdownDurationInSeconds;
 @property (nonatomic, strong) NSMutableArray *fieldArray;
-//@property (nonatomic, strong) NSString *productionName;
-//@property (nonatomic, strong) NSString *audioFileName;
-//@property (nonatomic, strong) NSString *audioLeftChannel;
-//@property (nonatomic, strong) NSString *audioRightChannel;
-//@property (nonatomic) int sceneNumber;
-//@property (nonatomic) int takeNumber;
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) SlateState *slateState;
