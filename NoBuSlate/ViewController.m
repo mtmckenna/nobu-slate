@@ -29,6 +29,7 @@ AVAudioPlayer *audioPlayerFinished;
 UITextField *activeTextField;
 
 BOOL didAttemptStateInitialization = NO;
+static NSArray *sceneAlphabet = nil;
 
 #pragma mark - Countdown methods
 
@@ -95,6 +96,8 @@ BOOL didAttemptStateInitialization = NO;
 
 - (void)prepareAudioFiles
 {
+    // TODO: handle error
+    
     // Countdown up ping sounds
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"countdown-pulse" ofType: @"wav"];        
     NSURL *fileUrl = [[NSURL alloc] initFileURLWithPath:soundFilePath];   
@@ -186,18 +189,17 @@ BOOL didAttemptStateInitialization = NO;
     [self saveContext];
 }
 
-- (void)updateSceneNumber
+- (void)updateSceneString
 {
-    sceneNumberField.text = [NSString stringWithFormat:@"%d", 
-                             [self.slateState.sceneNumber intValue]];
+    sceneStringField.text = [NSString stringWithFormat:@"%@", 
+                             self.slateState.sceneString];
     [self saveContext];
-
 }
 
 - (void)updateTakeNumber
 {
-    takeNumberField.text = [NSString stringWithFormat:@"%d", 
-                            [self.slateState.takeNumber intValue]];
+    takeNumberField.text = [NSString stringWithFormat:@"%@", 
+                            self.slateState.takeNumber];
     [self saveContext];
 }
 
@@ -243,19 +245,73 @@ BOOL didAttemptStateInitialization = NO;
                                                                     inManagedObjectContext:self.managedObjectContext];
         [self populateModels];
         
-    } else 
+    } 
+    else 
     {
         self.slateState = [objects objectAtIndex:0];
     }
 }
 
-#pragma mark - UIControl delegate methods
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+#pragma mark - Detect Scene Pattern
+// Handles two cases:
+// Case 1 - the scene number ends in a number
+// Case 2 - the scene number ends in a letter
+- (NSString *)sceneString:(NSString *)aString IncrementedByInteger:(int) incremenet
 {
-    NSLog(@"editing: %@", textField.text);
-    activeTextField = textField;
+    char lastCharacter = [aString characterAtIndex:[aString length] - 1];
+    BOOL isDigit = isdigit(lastCharacter);
+
+    NSString *newString = aString;
+    
+    // If the last char is a digit, increment the value of the number by increment...
+    if (isDigit)
+    {
+        NSError *error = NULL;
+        NSRegularExpression *sceneNumberRegEx = 
+        [[NSRegularExpression alloc] initWithPattern:@"(\\d+)[a-zA-Z]?$" 
+                                             options:NSRegularExpressionSearch 
+                                               error:&error];
+        
+        NSArray *matches = [sceneNumberRegEx matchesInString:aString
+                                                     options:0
+                                                       range:NSMakeRange(0, [aString length])];
+        
+        if ([matches count] > 0)
+        {
+            NSRange range =[(NSTextCheckingResult *)[matches objectAtIndex:0] rangeAtIndex:1];
+            int newNumberValue = [[aString substringWithRange:range] intValue] + incremenet;
+            if (newNumberValue < 1)
+            {
+                newNumberValue = 0;
+            }
+            
+            newString = [NSString stringWithFormat:@"%@%d", 
+                         [aString substringToIndex:range.location],
+                         newNumberValue];
+        }
+    }
+    // Else use the next latter in the alphabet
+    else
+    {
+        NSString *lastCharacterString = [aString substringFromIndex:[aString length] - 1];
+        int letterIndex = [sceneAlphabet indexOfObject:lastCharacterString] + incremenet;
+        
+        if (letterIndex >= [sceneAlphabet count] || letterIndex < 0)
+        {
+            letterIndex = 0;
+        }
+        
+        lastCharacterString = [sceneAlphabet objectAtIndex:letterIndex];
+        
+        newString = [NSString stringWithFormat:@"%@%@", 
+                     [aString substringToIndex:[aString length] - 1],
+                     lastCharacterString];
+    }
+    
+    return newString;
 }
+
+#pragma mark - UIControl delegate methods
 
 - (void)saveContext
 {
@@ -270,16 +326,20 @@ BOOL didAttemptStateInitialization = NO;
     }
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    activeTextField = textField;
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     if (textField == productionNameField)
     {
         self.slateState.productionName = productionNameField.text;
     }
-    else if (textField == sceneNumberField)
+    else if (textField == sceneStringField)
     {
-        self.slateState.sceneNumber = 
-        [NSNumber numberWithInt:[sceneNumberField.text intValue]];
+        self.slateState.sceneString = sceneStringField.text;
     }
     else if (textField == takeNumberField)
     {
@@ -324,11 +384,13 @@ BOOL didAttemptStateInitialization = NO;
 {
     UIView *touchedView = [(UISwipeGestureRecognizer *)sender view];
 
-    if (touchedView == sceneNumberView)
+    if (touchedView == sceneStringView)
     {
-        int value = [self.slateState.sceneNumber intValue] + 1;
-        self.slateState.sceneNumber = [NSNumber numberWithInt:value];
-        [self updateSceneNumber];
+        NSString *newSceneString = [self sceneString:self.slateState.sceneString 
+                                IncrementedByInteger:1];
+        
+        self.slateState.sceneString = newSceneString;
+        [self updateSceneString];
     }
     else if (touchedView == takeNumberView)
     {
@@ -349,15 +411,20 @@ BOOL didAttemptStateInitialization = NO;
 {
     UIView *touchedView = [(UISwipeGestureRecognizer *)sender view];
     
-    if (touchedView == sceneNumberView)
+    if (touchedView == sceneStringView)
     {
-        int value = [self.slateState.sceneNumber intValue] - 1;
-        self.slateState.sceneNumber = [NSNumber numberWithInt:value];
-        [self updateSceneNumber];
+        NSString *newSceneString = [self sceneString:self.slateState.sceneString 
+                                IncrementedByInteger:-1];
+        
+        self.slateState.sceneString = newSceneString;
+        [self updateSceneString];
     }
     else if (touchedView == takeNumberView)
     {
         int value = [self.slateState.takeNumber intValue] - 1;
+        
+        if (value < 1) value = 0;
+        
         self.slateState.takeNumber = [NSNumber numberWithInt:value];
         [self updateTakeNumber];
     }
@@ -425,11 +492,18 @@ BOOL didAttemptStateInitialization = NO;
 {
     [super viewDidLoad];
     
+    sceneAlphabet =[NSArray arrayWithObjects:
+     @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H",
+     @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P",
+     @"Q", @"R", @"S", @"T", @"U", @"V" @"W", @"X",
+     @"Y", @"Z",
+     nil];
+    
     [self prepareAudioFiles];
     [self updateDateAndTime];
     
     productionNameField.delegate = self;
-    sceneNumberField.delegate = self;
+    sceneStringField.delegate = self;
     takeNumberField.delegate = self;
     audioFileNameField.delegate = self;
     audioLeftChannelField.delegate = self;
@@ -437,6 +511,7 @@ BOOL didAttemptStateInitialization = NO;
     audioLeftChannelField.delegate = self;
     audioRightChannelField.delegate = self;
     self.countdownDurationInSeconds = 2;
+    sceneStringField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
         
     // Keyboard notifications
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -464,14 +539,14 @@ BOOL didAttemptStateInitialization = NO;
     [self updateAudioRightChannel];
     [self updateProductionName];
     [self updateTakeNumber];
-    [self updateSceneNumber];
+    [self updateSceneString];
     
     // TODO: Maybe there's a better way to do this...
     self.fieldArray = [NSMutableArray array];
     [self.fieldArray addObject:productionNameField];
-    [self.fieldArray addObject:sceneNumberField];
+    [self.fieldArray addObject:sceneStringField];
     [self.fieldArray addObject:takeNumberField];
-    [self.fieldArray addObject:sceneNumberView];
+    [self.fieldArray addObject:sceneStringView];
     [self.fieldArray addObject:takeNumberView];
     [self.fieldArray addObject:dateNumberView];
     [self.fieldArray addObject:audioFileNameView];

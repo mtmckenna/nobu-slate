@@ -216,8 +216,8 @@
                         <outlet property="productionNameView" destination="EQA-t0-K9l" id="83a-5D-lCc"/>
                         <outlet property="rChannelLabel" destination="akm-Q0-rKo" id="wGJ-QW-EXS"/>
                         <outlet property="sceneLabel" destination="god-nv-WsD" id="b7C-S1-NUT"/>
-                        <outlet property="sceneNumberField" destination="xPc-xh-NAZ" id="wuG-fM-OHZ"/>
-                        <outlet property="sceneNumberView" destination="fq1-KS-cem" id="qFz-rW-Xfq"/>
+                        <outlet property="sceneStringField" destination="xPc-xh-NAZ" id="nW5-ZS-0r7"/>
+                        <outlet property="sceneStringView" destination="fq1-KS-cem" id="KWF-eG-zvp"/>
                         <outlet property="scrollContainer" destination="tRA-a0-R8G" id="VHK-5l-BPc"/>
                         <outlet property="takeLabel" destination="Yaw-OY-Amb" id="2t4-1A-55N"/>
                         <outlet property="takeNumberField" destination="N6A-Rz-tcb" id="Bbn-eL-pfc"/>
@@ -293,8 +293,8 @@
                 <relationship kind="outlet" name="productionNameView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="rChannelLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="sceneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sceneNumberField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sceneNumberView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="sceneStringField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sceneStringView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="scrollContainer" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="takeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="takeNumberField" candidateClass="UITextField"/>

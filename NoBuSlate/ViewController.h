@@ -15,10 +15,10 @@
 @interface ViewController : UIViewController <UITextFieldDelegate, AVAudioPlayerDelegate, NSFetchedResultsControllerDelegate>
 {    
     IBOutlet UITextField *productionNameField;
-    IBOutlet UITextField *sceneNumberField;
+    IBOutlet UITextField *sceneStringField;
     IBOutlet UITextField *takeNumberField;
     IBOutlet UIView *productionNameView;
-    IBOutlet UIView *sceneNumberView;
+    IBOutlet UIView *sceneStringView;
     IBOutlet UIView *takeNumberView;
     IBOutlet UIView *dateNumberView;
     IBOutlet UIView *audioFileNameView;
@@ -66,5 +66,7 @@
 - (IBAction)handleSideSwipe:(id)sender;
 - (IBAction)handleUpSwipe:(id)sender;
 - (IBAction)handleDownSwipe:(id)sender;
+
+- (NSString *)sceneString:(NSString *)aString IncrementedByInteger:(int) incremenet;
 
 @end

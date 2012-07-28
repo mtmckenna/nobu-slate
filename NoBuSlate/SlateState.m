@@ -3,7 +3,7 @@
 //  NoBuSlate
 //
 //  Created by Matthew McKenna on 6/3/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Matthew McKenna. All rights reserved.
 //
 
 #import "SlateState.h"
@@ -15,7 +15,7 @@
 @dynamic audioLeftChannel;
 @dynamic audioRightChannel;
 @dynamic productionName;
-@dynamic sceneNumber;
+@dynamic sceneString;
 @dynamic takeNumber;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9121B6015C25CDD0040E952 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9121B5F15C25CDD0040E952 /* Icon.png */; };
 		C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */; };
 		C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9794B2B157333860001286C /* NSTimer+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9794B3B15735A450001286C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9794B3A15735A450001286C /* AVFoundation.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9121B5F15C25CDD0040E952 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = icons/Icon.png; sourceTree = "<group>"; };
 		C9794B2A157333860001286C /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -182,6 +184,7 @@
 		C9A0BEAD1572D033003A7062 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9121B5F15C25CDD0040E952 /* Icon.png */,
 				C9A0BEAE1572D033003A7062 /* NoBuSlate-Info.plist */,
 				C9A0BEAF1572D033003A7062 /* InfoPlist.strings */,
 				C9A0BEB21572D033003A7062 /* main.m */,
@@ -284,6 +287,7 @@
 				C9A0BEBD1572D033003A7062 /* MainStoryboard_iPad.storyboard in Resources */,
 				C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */,
 				C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */,
+				C9121B6015C25CDD0040E952 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

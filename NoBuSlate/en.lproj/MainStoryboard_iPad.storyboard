@@ -216,8 +216,8 @@
                         <outlet property="productionNameView" destination="VdJ-OH-bpN" id="H1h-XE-fqa"/>
                         <outlet property="rChannelLabel" destination="HWi-oS-2GM" id="zyc-WX-fQA"/>
                         <outlet property="sceneLabel" destination="hQZ-x7-uGd" id="4qY-bS-9V3"/>
-                        <outlet property="sceneNumberField" destination="u8D-aM-aS4" id="Nke-tK-RcD"/>
-                        <outlet property="sceneNumberView" destination="WcT-vm-Ngh" id="Dzm-9h-55b"/>
+                        <outlet property="sceneStringField" destination="u8D-aM-aS4" id="IXR-52-DIS"/>
+                        <outlet property="sceneStringView" destination="WcT-vm-Ngh" id="zEt-Bi-1bP"/>
                         <outlet property="scrollContainer" destination="QvE-ir-11P" id="UJv-uw-Ur9"/>
                         <outlet property="takeLabel" destination="Qb7-c8-iRO" id="YB2-Zh-ski"/>
                         <outlet property="takeNumberField" destination="hgX-hh-3F1" id="IOp-Ph-SMj"/>

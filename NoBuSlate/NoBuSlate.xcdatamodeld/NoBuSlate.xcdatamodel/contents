@@ -5,7 +5,7 @@
         <attribute name="audioLeftChannel" attributeType="String" defaultValueString="Lav" syncable="YES"/>
         <attribute name="audioRightChannel" attributeType="String" defaultValueString="Boom" syncable="YES"/>
         <attribute name="productionName" attributeType="String" defaultValueString="Jaws V: Sharks in Time" syncable="YES"/>
-        <attribute name="sceneNumber" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+        <attribute name="sceneString" attributeType="String" defaultValueString="1" syncable="YES"/>
         <attribute name="takeNumber" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
     </entity>
     <elements>
