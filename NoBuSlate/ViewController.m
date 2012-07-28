@@ -290,7 +290,7 @@ static NSArray *sceneAlphabet = nil;
                          newNumberValue];
         }
     }
-    // Else use the next latter in the alphabet
+    // Else use the next letter in the alphabet
     else
     {
         NSString *lastCharacterString = [aString substringFromIndex:[aString length] - 1];
@@ -414,7 +414,7 @@ static NSArray *sceneAlphabet = nil;
     if (touchedView == sceneStringView)
     {
         NSString *newSceneString = [self sceneString:self.slateState.sceneString 
-                                IncrementedByInteger:-1];
+                                incrementedByInteger:-1];
         
         self.slateState.sceneString = newSceneString;
         [self updateSceneString];
