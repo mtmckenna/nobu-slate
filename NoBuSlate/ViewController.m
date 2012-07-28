@@ -256,7 +256,7 @@ static NSArray *sceneAlphabet = nil;
 // Handles two cases:
 // Case 1 - the scene number ends in a number
 // Case 2 - the scene number ends in a letter
-- (NSString *)sceneString:(NSString *)aString IncrementedByInteger:(int) incremenet
+- (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int) incremenet
 {
     char lastCharacter = [aString characterAtIndex:[aString length] - 1];
     BOOL isDigit = isdigit(lastCharacter);
@@ -387,7 +387,7 @@ static NSArray *sceneAlphabet = nil;
     if (touchedView == sceneStringView)
     {
         NSString *newSceneString = [self sceneString:self.slateState.sceneString 
-                                IncrementedByInteger:1];
+                                incrementedByInteger:1];
         
         self.slateState.sceneString = newSceneString;
         [self updateSceneString];
@@ -493,11 +493,10 @@ static NSArray *sceneAlphabet = nil;
     [super viewDidLoad];
     
     sceneAlphabet =[NSArray arrayWithObjects:
-     @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H",
-     @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P",
-     @"Q", @"R", @"S", @"T", @"U", @"V" @"W", @"X",
-     @"Y", @"Z",
-     nil];
+                    @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", 
+                    @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", 
+                    @"U", @"V" @"W", @"X", @"Y", @"Z",
+                    nil];
     
     [self prepareAudioFiles];
     [self updateDateAndTime];
