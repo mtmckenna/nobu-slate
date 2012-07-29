@@ -449,7 +449,7 @@ static int letterCount;
     {
         int value = [self.slateState.takeNumber intValue] - 1;
         
-        if (value < 1) value = 0;
+        if (value < 1) value = 1;
         
         self.slateState.takeNumber = [NSNumber numberWithInt:value];
         [self updateTakeNumber];
