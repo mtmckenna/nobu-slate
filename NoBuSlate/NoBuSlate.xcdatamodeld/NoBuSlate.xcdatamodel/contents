@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="SlateState" representedClassName="SlateState" syncable="YES">
-        <attribute name="audioFileName" attributeType="String" defaultValueString="000" syncable="YES"/>
+        <attribute name="audioFileName" attributeType="String" defaultValueString="001" syncable="YES"/>
         <attribute name="audioLeftChannel" attributeType="String" defaultValueString="Lav" syncable="YES"/>
         <attribute name="audioRightChannel" attributeType="String" defaultValueString="Boom" syncable="YES"/>
-        <attribute name="productionName" attributeType="String" defaultValueString="Jaws V: Sharks in Time" syncable="YES"/>
+        <attribute name="productionName" attributeType="String" defaultValueString="Production Name" syncable="YES"/>
         <attribute name="sceneString" attributeType="String" defaultValueString="1" syncable="YES"/>
         <attribute name="takeNumber" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
     </entity>
