@@ -30,6 +30,7 @@ UITextField *activeTextField;
 
 BOOL didAttemptStateInitialization = NO;
 static NSArray *sceneAlphabet = nil;
+static int letterCount;
 
 #pragma mark - Countdown methods
 
@@ -256,7 +257,7 @@ static NSArray *sceneAlphabet = nil;
 // Handles two cases:
 // Case 1 - the scene number ends in a number
 // Case 2 - the scene number ends in a letter
-- (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int) incremenet
+- (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int)increment
 {
     char lastCharacter = [aString characterAtIndex:[aString length] - 1];
     BOOL isDigit = isdigit(lastCharacter);
@@ -279,7 +280,7 @@ static NSArray *sceneAlphabet = nil;
         if ([matches count] > 0)
         {
             NSRange range =[(NSTextCheckingResult *)[matches objectAtIndex:0] rangeAtIndex:1];
-            int newNumberValue = [[aString substringWithRange:range] intValue] + incremenet;
+            int newNumberValue = [[aString substringWithRange:range] intValue] + increment;
             if (newNumberValue < 1)
             {
                 newNumberValue = 0;
@@ -294,17 +295,31 @@ static NSArray *sceneAlphabet = nil;
     else
     {
         NSString *lastCharacterString = [aString substringFromIndex:[aString length] - 1];
-        int letterIndex = [sceneAlphabet indexOfObject:lastCharacterString] + incremenet;
+        int currentIndex = [sceneAlphabet indexOfObject:lastCharacterString];
         
-        if (letterIndex >= [sceneAlphabet count] || letterIndex < 0)
+        // Formula to get next letter index taking looping around the array into
+        // account
+        int letterIndex = currentIndex + increment - 
+            (int)(currentIndex + increment)/letterCount * letterCount;
+
+        NSString *scenePrefix = [aString substringToIndex:[aString length] - 1];
+        
+        if (letterIndex < 0)
         {
             letterIndex = 0;
         }
         
-        lastCharacterString = [sceneAlphabet objectAtIndex:letterIndex];
+        // If scene number is like this: 12Z, then use entire string as prefix
+        // so that the next scene number will look like this: 12ZA
+        if ([lastCharacterString isEqualToString:[sceneAlphabet objectAtIndex:letterCount -1]])
+        {
+            scenePrefix = aString;
+        }
         
+        lastCharacterString = [sceneAlphabet objectAtIndex:letterIndex];
+                
         newString = [NSString stringWithFormat:@"%@%@", 
-                     [aString substringToIndex:[aString length] - 1],
+                     scenePrefix,
                      lastCharacterString];
     }
     
@@ -495,8 +510,10 @@ static NSArray *sceneAlphabet = nil;
     sceneAlphabet =[NSArray arrayWithObjects:
                     @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", 
                     @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", 
-                    @"U", @"V" @"W", @"X", @"Y", @"Z",
+                    @"U", @"V", @"W", @"X", @"Y", @"Z",
                     nil];
+    
+    letterCount = [sceneAlphabet count];
     
     [self prepareAudioFiles];
     [self updateDateAndTime];
@@ -509,7 +526,7 @@ static NSArray *sceneAlphabet = nil;
     audioRightChannelField.delegate = self;
     audioLeftChannelField.delegate = self;
     audioRightChannelField.delegate = self;
-    self.countdownDurationInSeconds = 2;
+    self.countdownDurationInSeconds = 1;
     sceneStringField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
         
     // Keyboard notifications
