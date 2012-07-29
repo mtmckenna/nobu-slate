@@ -176,8 +176,8 @@
                                         <rect key="frame" x="20" y="20" width="984" height="76"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Framed Baby Photos" minimumFontSize="17" clearButtonMode="whileEditing" id="wXG-WE-4wT">
-                                                <rect key="frame" x="0.0" y="0.0" width="984" height="76"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Production" minimumFontSize="17" clearButtonMode="whileEditing" id="wXG-WE-4wT">
+                                                <rect key="frame" x="0.0" y="0.0" width="984" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,6 +264,11 @@
                         <action selector="handleDownSwipe:" destination="2" id="Sln-Of-HtC"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="4pg-3d-GQa">
+                    <connections>
+                        <action selector="handleTap:" destination="2" id="MkN-Wz-9sO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
@@ -290,8 +295,8 @@
                 <relationship kind="outlet" name="productionNameView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="rChannelLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="sceneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sceneNumberField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sceneNumberView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="sceneStringField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sceneStringView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="scrollContainer" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="takeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="takeNumberField" candidateClass="UITextField"/>

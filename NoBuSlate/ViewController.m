@@ -254,14 +254,13 @@ static int letterCount;
 }
 
 #pragma mark - Detect Scene Pattern
-// Handles two cases:
 // Case 1 - the scene number ends in a number
 // Case 2 - the scene number ends in a letter
 - (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int)increment
 {
     char lastCharacter = [aString characterAtIndex:[aString length] - 1];
     BOOL isDigit = isdigit(lastCharacter);
-
+    
     NSString *newString = aString;
     
     // If the last char is a digit, increment the value of the number by increment...
@@ -297,27 +296,19 @@ static int letterCount;
         NSString *lastCharacterString = [aString substringFromIndex:[aString length] - 1];
         int currentIndex = [sceneAlphabet indexOfObject:lastCharacterString];
         
+        // Number of complete trips across the alphabet
+        int letterCycles = (int)(currentIndex + increment)/letterCount;
+        
         // Formula to get next letter index taking looping around the array into
         // account
-        int letterIndex = currentIndex + increment - 
-            (int)(currentIndex + increment)/letterCount * letterCount;
-
+        int letterIndex = currentIndex + increment - letterCycles * letterCount;
+        
+        if (letterIndex < 0) letterIndex = letterCount + letterIndex;
+        
         NSString *scenePrefix = [aString substringToIndex:[aString length] - 1];
         
-        if (letterIndex < 0)
-        {
-            letterIndex = 0;
-        }
-        
-        // If scene number is like this: 12Z, then use entire string as prefix
-        // so that the next scene number will look like this: 12ZA
-        if ([lastCharacterString isEqualToString:[sceneAlphabet objectAtIndex:letterCount -1]])
-        {
-            scenePrefix = aString;
-        }
-        
         lastCharacterString = [sceneAlphabet objectAtIndex:letterIndex];
-                
+        
         newString = [NSString stringWithFormat:@"%@%@", 
                      scenePrefix,
                      lastCharacterString];
@@ -375,7 +366,7 @@ static int letterCount;
     }
     
     [self saveContext];
-    
+    [textField resignFirstResponder];
     activeTextField = nil;
 }
 
@@ -391,6 +382,26 @@ static int letterCount;
         if ([view isKindOfClass:[UITextField class]])
             [view resignFirstResponder];
     }
+}
+
+- (void)didFinishEditingAudioFileField
+{
+    [self textFieldDidEndEditing:audioFileNameField];
+}
+
+- (void)configureNumberPadAccessoryView
+{
+    UIToolbar* numberToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 
+                                                                           0, 
+                                                                           self.view.bounds.size.width, 
+                                                                           50)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(didFinishEditingAudioFileField)],
+                           nil];
+    [numberToolbar sizeToFit];
+    audioFileNameField.inputAccessoryView = numberToolbar;
 }
 
 #pragma mark - Handle gestures
@@ -456,6 +467,16 @@ static int letterCount;
     [self toggleCountdown];
 }
 
+- (IBAction)handleTap:(id)sender
+{
+    // Hide keyboard. This is mainly here because the number pad doesn't have
+    // a done button.
+    if (activeTextField)
+    {
+        [self textFieldDidEndEditing:activeTextField];
+    }
+}
+
 #pragma mark - Keyboard methods
 
 // http://developer.apple.com/library/ios/#documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW7
@@ -507,9 +528,10 @@ static int letterCount;
 {
     [super viewDidLoad];
     
+    // Skip I and O since they can be confused for a number
     sceneAlphabet =[NSArray arrayWithObjects:
-                    @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", 
-                    @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", 
+                    @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"J", 
+                    @"K", @"L", @"M", @"N", @"P", @"Q", @"R", @"S", @"T", 
                     @"U", @"V", @"W", @"X", @"Y", @"Z",
                     nil];
     
@@ -528,6 +550,8 @@ static int letterCount;
     audioRightChannelField.delegate = self;
     self.countdownDurationInSeconds = 1;
     sceneStringField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
+    audioFileNameField.keyboardType = UIKeyboardTypeNumberPad;
+    [self configureNumberPadAccessoryView];
         
     // Keyboard notifications
     [[NSNotificationCenter defaultCenter] addObserver:self

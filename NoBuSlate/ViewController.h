@@ -37,6 +37,8 @@
     IBOutlet UILabel *channelsLabel;
     IBOutlet UILabel *lChannelLabel;
     IBOutlet UILabel *rChannelLabel;
+    
+    UIButton *doneButton;
 }
 
 @property (nonatomic, strong) NSTimer *countdownTimer;
@@ -67,6 +69,6 @@
 - (IBAction)handleUpSwipe:(id)sender;
 - (IBAction)handleDownSwipe:(id)sender;
 
-- (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int) incremenet;
+- (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int) increment;
 
 @end

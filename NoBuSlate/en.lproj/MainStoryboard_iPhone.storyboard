@@ -196,6 +196,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="7El-Mg-Mwo" appends="YES" id="uBe-yn-2ml"/>
                             <outletCollection property="gestureRecognizers" destination="SFc-1d-eEW" appends="YES" id="MmJ-3I-onZ"/>
+                            <outletCollection property="gestureRecognizers" destination="nTB-o0-vKw" appends="YES" id="pea-vd-yU1"/>
                         </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -267,6 +268,11 @@
                         <action selector="handleSideSwipe:" destination="2" id="TEz-iW-YNk"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="nTB-o0-vKw">
+                    <connections>
+                        <action selector="handleTap:" destination="2" id="hbh-s9-ErD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
