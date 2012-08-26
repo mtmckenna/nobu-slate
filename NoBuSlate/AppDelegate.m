@@ -34,6 +34,7 @@
         __managedObjectContext = [[NSManagedObjectContext alloc] init];
         [__managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
+    
     return __managedObjectContext;
 }
 

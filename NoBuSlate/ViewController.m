@@ -486,20 +486,47 @@ static int letterCount;
 {
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    NSLog(@"======");
+    NSLog(@"kbSize width: %f height: %f", kbSize.width, kbSize.height);
     
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    CGRect aRect = self.view.bounds;
+//    //CGRect aRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+//    
+//    NSLog(@"rect: x: %f y: %f width: %f height: %f", aRect.origin.x, 
+//          aRect.origin.y, aRect.size.width, aRect.size.height);
+    
+    float offset;
+    if UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
+    {
+        NSLog(@"Portrait");
+        offset = kbSize.height;
+        aRect.origin.x = self.view.frame.origin.x;
+        aRect.origin.y = self.view.frame.origin.y;
+    }
+    else
+    {
+        NSLog(@"Landscape");
+        offset = kbSize.width;
+        aRect.origin.x = self.view.frame.origin.y;
+        aRect.origin.y = self.view.frame.origin.x;
+    }
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, offset, 0.0);
     scrollContainer.contentInset = contentInsets;
     scrollContainer.scrollIndicatorInsets = contentInsets;
     
-    // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your application might not need or want this behavior.
-    CGRect aRect = self.view.frame;
-    aRect.size.height -= kbSize.height;
-    CGPoint origin = activeTextField.frame.origin;
-    origin = [activeTextField convertPoint:origin toView:activeTextField.superview];
+    aRect.size.height -= offset;
+    
+    CGPoint origin = [self.view convertPoint:activeTextField.frame.origin fromView:activeTextField];
+    origin.y +=  activeTextField.bounds.size.height;
     origin.y -= scrollContainer.contentOffset.y;
+    
+    NSLog(@"rect: x: %f y: %f width: %f height: %f", aRect.origin.x, 
+          aRect.origin.y, aRect.size.width, aRect.size.height);
+    NSLog(@"origin: %@", NSStringFromCGPoint(origin));
+    
     if (!CGRectContainsPoint(aRect, origin) ) {
-        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.superview.frame.origin.y-(aRect.size.height)); 
+        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.frame.origin.y + (aRect.size.height)); 
         [scrollContainer setContentOffset:scrollPoint animated:YES];
     }
 }
