@@ -172,7 +172,7 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="EQA-t0-K9l">
-                                        <rect key="frame" x="20" y="5" width="440" height="31"/>
+                                        <rect key="frame" x="20" y="20" width="440" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Production" minimumFontSize="17" clearButtonMode="whileEditing" id="1WE-Si-hhd">
