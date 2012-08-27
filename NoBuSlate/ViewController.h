@@ -69,6 +69,6 @@
 - (IBAction)handleUpSwipe:(id)sender;
 - (IBAction)handleDownSwipe:(id)sender;
 
-- (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int) increment;
+- (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int)increment;
 
 @end

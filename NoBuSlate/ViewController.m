@@ -384,9 +384,9 @@ static int letterCount;
     }
 }
 
-- (void)didFinishEditingAudioFileField
+- (void)didFinishEditingField
 {
-    [self textFieldDidEndEditing:audioFileNameField];
+    [self textFieldDidEndEditing:activeTextField];
 }
 
 - (void)configureNumberPadAccessoryView
@@ -395,13 +395,16 @@ static int letterCount;
                                                                            0, 
                                                                            self.view.bounds.size.width, 
                                                                            50)];
-    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    
+//    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.barStyle = UIBarStyleBlackOpaque;
     numberToolbar.items = [NSArray arrayWithObjects:
                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-                           [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(didFinishEditingAudioFileField)],
+                           [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(didFinishEditingField)],
                            nil];
     [numberToolbar sizeToFit];
     audioFileNameField.inputAccessoryView = numberToolbar;
+    takeNumberField.inputAccessoryView = numberToolbar;
 }
 
 #pragma mark - Handle gestures
@@ -479,54 +482,31 @@ static int letterCount;
 
 #pragma mark - Keyboard methods
 
-// http://developer.apple.com/library/ios/#documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW7
-// http://stackoverflow.com/a/4837510
 // Called when the UIKeyboardDidShowNotification is sent.
 - (void)keyboardWillShow:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    NSLog(@"======");
-    NSLog(@"kbSize width: %f height: %f", kbSize.width, kbSize.height);
-    
-    CGRect aRect = self.view.bounds;
-//    //CGRect aRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-//    
-//    NSLog(@"rect: x: %f y: %f width: %f height: %f", aRect.origin.x, 
-//          aRect.origin.y, aRect.size.width, aRect.size.height);
-    
-    float offset;
-    if UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
-    {
-        NSLog(@"Portrait");
-        offset = kbSize.height;
-        aRect.origin.x = self.view.frame.origin.x;
-        aRect.origin.y = self.view.frame.origin.y;
-    }
-    else
-    {
-        NSLog(@"Landscape");
-        offset = kbSize.width;
-        aRect.origin.x = self.view.frame.origin.y;
-        aRect.origin.y = self.view.frame.origin.x;
-    }
+        
+    // Keyboard height
+    float offset = kbSize.width;
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, offset, 0.0);
     scrollContainer.contentInset = contentInsets;
     scrollContainer.scrollIndicatorInsets = contentInsets;
     
+    // The screen rect that ISN'T covered by the keyboard.
+    CGRect aRect = self.view.bounds;
     aRect.size.height -= offset;
     
-    CGPoint origin = [self.view convertPoint:activeTextField.frame.origin fromView:activeTextField];
-    origin.y +=  activeTextField.bounds.size.height;
-    origin.y -= scrollContainer.contentOffset.y;
+    CGRect activeFieldBounds = [activeTextField convertRect:activeTextField.bounds toView:scrollContainer];
+    CGPoint bottomOfBoxPoint = activeFieldBounds.origin;
     
-    NSLog(@"rect: x: %f y: %f width: %f height: %f", aRect.origin.x, 
-          aRect.origin.y, aRect.size.width, aRect.size.height);
-    NSLog(@"origin: %@", NSStringFromCGPoint(origin));
+    // Want to know if the BOTTOM of the text field is covered up by the keyboard.
+    bottomOfBoxPoint.y += activeFieldBounds.size.height;
     
-    if (!CGRectContainsPoint(aRect, origin) ) {
-        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.frame.origin.y + (aRect.size.height)); 
+    if (!CGRectContainsPoint(aRect, bottomOfBoxPoint) ) {
+        CGPoint scrollPoint = CGPointMake(0.0, bottomOfBoxPoint.y - aRect.size.height);
         [scrollContainer setContentOffset:scrollPoint animated:YES];
     }
 }
@@ -578,6 +558,7 @@ static int letterCount;
     self.countdownDurationInSeconds = 1;
     sceneStringField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
     audioFileNameField.keyboardType = UIKeyboardTypeNumberPad;
+    takeNumberField.keyboardType = UIKeyboardTypeNumberPad;
     [self configureNumberPadAccessoryView];
         
     // Keyboard notifications

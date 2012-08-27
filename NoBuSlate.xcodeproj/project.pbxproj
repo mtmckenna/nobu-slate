@@ -48,7 +48,7 @@
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C9794B3D157361080001286C /* NoBuSlate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoBuSlate.xcdatamodel; sourceTree = "<group>"; };
-		C9A0BEA21572D033003A7062 /* NoBuSlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBuSlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A0BEA21572D033003A7062 /* NoBuSlate2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBuSlate2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A0BEA61572D033003A7062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9A0BEA81572D033003A7062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9A0BEAA1572D033003A7062 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -144,7 +144,7 @@
 		C9A0BEA31572D033003A7062 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9A0BEA21572D033003A7062 /* NoBuSlate.app */,
+				C9A0BEA21572D033003A7062 /* NoBuSlate2.app */,
 				C9A0BEC61572D034003A7062 /* NoBuSlateTests.octest */,
 			);
 			name = Products;
@@ -229,7 +229,7 @@
 			);
 			name = NoBuSlate;
 			productName = NoBuSlate;
-			productReference = C9A0BEA21572D033003A7062 /* NoBuSlate.app */;
+			productReference = C9A0BEA21572D033003A7062 /* NoBuSlate2.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C9A0BEC51572D034003A7062 /* NoBuSlateTests */ = {
