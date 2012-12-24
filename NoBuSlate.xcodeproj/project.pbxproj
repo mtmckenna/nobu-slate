@@ -31,6 +31,10 @@
 		C9A7DB2015772B80008899EE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7DB1F15772B80008899EE /* AudioToolbox.framework */; };
 		C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2515773B83008899EE /* countdown-finished.wav */; };
 		C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2715773B9D008899EE /* countdown-pulse.wav */; };
+		C9AFC1891687ECBA00546125 /* FieldEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1871687ECBA00546125 /* FieldEditorViewController.m */; };
+		C9AFC18A1687ECBA00546125 /* FieldEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1871687ECBA00546125 /* FieldEditorViewController.m */; };
+		C9AFC18B1687ECBA00546125 /* FieldEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC1881687ECBA00546125 /* FieldEditorViewController.xib */; };
+		C9AFC18C1687ECBA00546125 /* FieldEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC1881687ECBA00546125 /* FieldEditorViewController.xib */; };
 		C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D340D3157C86C900F8D0E4 /* SlateState.m */; };
 		C9DD67791579E4A70024526D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DD67781579E4A70024526D /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -47,9 +51,9 @@
 
 /* Begin PBXFileReference section */
 		C9121B5F15C25CDD0040E952 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = icons/Icon.png; sourceTree = "<group>"; };
-		C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C961A3B7160D92ED00C3C2E2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		C961A3B9160D92F700C3C2E2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		C961A3B7160D92ED00C3C2E2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		C961A3B9160D92F700C3C2E2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		C9794B2A157333860001286C /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +81,9 @@
 		C9A7DB1F15772B80008899EE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C9A7DB2515773B83008899EE /* countdown-finished.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-finished.wav"; sourceTree = "<group>"; };
 		C9A7DB2715773B9D008899EE /* countdown-pulse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-pulse.wav"; sourceTree = "<group>"; };
+		C9AFC1861687ECBA00546125 /* FieldEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldEditorViewController.h; sourceTree = "<group>"; };
+		C9AFC1871687ECBA00546125 /* FieldEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldEditorViewController.m; sourceTree = "<group>"; };
+		C9AFC1881687ECBA00546125 /* FieldEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FieldEditorViewController.xib; sourceTree = "<group>"; };
 		C9D340D2157C86C900F8D0E4 /* SlateState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlateState.h; sourceTree = "<group>"; };
 		C9D340D3157C86C900F8D0E4 /* SlateState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlateState.m; sourceTree = "<group>"; };
 		C9DD67781579E4A70024526D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -129,6 +136,9 @@
 		C9794B39157359BA0001286C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C961A3B9160D92F700C3C2E2 /* Default.png */,
+				C961A3B7160D92ED00C3C2E2 /* Default@2x.png */,
+				C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */,
 				C9A7DB2715773B9D008899EE /* countdown-pulse.wav */,
 				C9A7DB2515773B83008899EE /* countdown-finished.wav */,
 				C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */,
@@ -139,9 +149,6 @@
 		C9A0BE971572D033003A7062 = {
 			isa = PBXGroup;
 			children = (
-				C961A3B9160D92F700C3C2E2 /* Default.png */,
-				C961A3B7160D92ED00C3C2E2 /* Default@2x.png */,
-				C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */,
 				C9794B25157333540001286C /* External */,
 				C9A0BEAC1572D033003A7062 /* NoBuSlate */,
 				C9A0BECD1572D034003A7062 /* NoBuSlateTests */,
@@ -183,6 +190,9 @@
 				C9A0BEB61572D033003A7062 /* AppDelegate.m */,
 				C9A0BEBE1572D033003A7062 /* ViewController.h */,
 				C9A0BEBF1572D034003A7062 /* ViewController.m */,
+				C9AFC1861687ECBA00546125 /* FieldEditorViewController.h */,
+				C9AFC1871687ECBA00546125 /* FieldEditorViewController.m */,
+				C9AFC1881687ECBA00546125 /* FieldEditorViewController.xib */,
 				C9A0BEB81572D033003A7062 /* MainStoryboard_iPhone.storyboard */,
 				C9A0BEBB1572D033003A7062 /* MainStoryboard_iPad.storyboard */,
 				C9A0BEAD1572D033003A7062 /* Supporting Files */,
@@ -300,6 +310,7 @@
 				C961A3B5160D92DF00C3C2E2 /* Default-568h@2x.png in Resources */,
 				C961A3B8160D92ED00C3C2E2 /* Default@2x.png in Resources */,
 				C961A3BA160D92F700C3C2E2 /* Default.png in Resources */,
+				C9AFC18B1687ECBA00546125 /* FieldEditorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A0BED21572D034003A7062 /* InfoPlist.strings in Resources */,
+				C9AFC18C1687ECBA00546125 /* FieldEditorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +352,7 @@
 				C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */,
 				C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */,
 				C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */,
+				C9AFC1891687ECBA00546125 /* FieldEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A0BED51572D034003A7062 /* NoBuSlateTests.m in Sources */,
+				C9AFC18A1687ECBA00546125 /* FieldEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
