@@ -493,7 +493,6 @@ static int letterCount;
     float offset = kbSize.width;
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, offset, 0.0);
-    NSLog(@"offset: %f", offset);
     scrollContainer.contentInset = contentInsets;
     scrollContainer.scrollIndicatorInsets = contentInsets;
     
@@ -590,7 +589,6 @@ static int letterCount;
     [self updateTakeNumber];
     [self updateSceneString];
     
-    // TODO: Maybe there's a better way to do this...
     self.fieldArray = [NSMutableArray array];
     [self.fieldArray addObject:productionNameField];
     [self.fieldArray addObject:sceneStringField];
