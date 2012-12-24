@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C9121B6015C25CDD0040E952 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9121B5F15C25CDD0040E952 /* Icon.png */; };
 		C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */; };
+		C961A3B5160D92DF00C3C2E2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */; };
+		C961A3B8160D92ED00C3C2E2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C961A3B7160D92ED00C3C2E2 /* Default@2x.png */; };
+		C961A3BA160D92F700C3C2E2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C961A3B9160D92F700C3C2E2 /* Default.png */; };
 		C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9794B2B157333860001286C /* NSTimer+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9794B3B15735A450001286C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9794B3A15735A450001286C /* AVFoundation.framework */; };
 		C9A0BEA71572D033003A7062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
@@ -44,11 +47,14 @@
 
 /* Begin PBXFileReference section */
 		C9121B5F15C25CDD0040E952 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = icons/Icon.png; sourceTree = "<group>"; };
+		C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C961A3B7160D92ED00C3C2E2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C961A3B9160D92F700C3C2E2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C9794B2A157333860001286C /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C9794B3D157361080001286C /* NoBuSlate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoBuSlate.xcdatamodel; sourceTree = "<group>"; };
-		C9A0BEA21572D033003A7062 /* NoBuSlate2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBuSlate2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A0BEA21572D033003A7062 /* NoBuSlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBuSlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A0BEA61572D033003A7062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9A0BEA81572D033003A7062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9A0BEAA1572D033003A7062 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +139,9 @@
 		C9A0BE971572D033003A7062 = {
 			isa = PBXGroup;
 			children = (
+				C961A3B9160D92F700C3C2E2 /* Default.png */,
+				C961A3B7160D92ED00C3C2E2 /* Default@2x.png */,
+				C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */,
 				C9794B25157333540001286C /* External */,
 				C9A0BEAC1572D033003A7062 /* NoBuSlate */,
 				C9A0BECD1572D034003A7062 /* NoBuSlateTests */,
@@ -144,7 +153,7 @@
 		C9A0BEA31572D033003A7062 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9A0BEA21572D033003A7062 /* NoBuSlate2.app */,
+				C9A0BEA21572D033003A7062 /* NoBuSlate.app */,
 				C9A0BEC61572D034003A7062 /* NoBuSlateTests.octest */,
 			);
 			name = Products;
@@ -229,7 +238,7 @@
 			);
 			name = NoBuSlate;
 			productName = NoBuSlate;
-			productReference = C9A0BEA21572D033003A7062 /* NoBuSlate2.app */;
+			productReference = C9A0BEA21572D033003A7062 /* NoBuSlate.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C9A0BEC51572D034003A7062 /* NoBuSlateTests */ = {
@@ -288,6 +297,9 @@
 				C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */,
 				C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */,
 				C9121B6015C25CDD0040E952 /* Icon.png in Resources */,
+				C961A3B5160D92DF00C3C2E2 /* Default-568h@2x.png in Resources */,
+				C961A3B8160D92ED00C3C2E2 /* Default@2x.png in Resources */,
+				C961A3BA160D92F700C3C2E2 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
