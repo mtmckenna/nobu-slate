@@ -30,7 +30,7 @@
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="18" id="xPc-xh-NAZ">
                                                 <rect key="frame" x="0.0" y="24" width="141" height="117"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="120"/>
@@ -57,7 +57,7 @@
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="10" id="N6A-Rz-tcb">
                                                 <rect key="frame" x="0.0" y="24" width="141" height="117"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="120"/>
@@ -114,7 +114,7 @@
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" minimumFontSize="17" id="eMT-0C-PXY">
                                                 <rect key="frame" x="2" y="31" width="287" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -155,14 +155,14 @@
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" minimumFontSize="17" id="QNH-ib-kdh">
                                                 <rect key="frame" x="30" y="21" width="109" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" minimumFontSize="17" id="19o-Y4-Peo">
                                                 <rect key="frame" x="30" y="45" width="109" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -275,6 +275,40 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissKeyboard:"/>
+                <relationship kind="action" name="handleDownSwipe:"/>
+                <relationship kind="action" name="handleSideSwipe:"/>
+                <relationship kind="action" name="handleTap:"/>
+                <relationship kind="action" name="handleUpSwipe:"/>
+                <relationship kind="outlet" name="audioFileLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="audioFileNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="audioFileNameView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="audioLeftChannelField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="audioRightChannelField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="channelsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="channelsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="currentDateField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="currentTimeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dateNumberView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="dateTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lChannelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="productionNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="productionNameView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="rChannelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sceneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sceneStringField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sceneStringView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="scrollContainer" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="takeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="takeNumberField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="takeNumberView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>

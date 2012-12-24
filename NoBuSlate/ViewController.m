@@ -483,40 +483,6 @@ static int letterCount;
 
 #pragma mark - Keyboard methods
 
-// Called when the UIKeyboardDidShowNotification is sent.
-//- (void)keyboardWillShow:(NSNotification*)aNotification
-//{
-//    NSDictionary* info = [aNotification userInfo];
-//    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-//        
-//    // TODO: Handle portrait mode
-//    // Keyboard height
-//    float offset = kbSize.width;
-//    
-//    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, offset, 0.0);
-//    NSLog(@"offset: %f", offset);
-//    scrollContainer.contentInset = contentInsets;
-//    scrollContainer.scrollIndicatorInsets = contentInsets;
-//    
-//    // The screen rect that ISN'T covered by the keyboard.
-//    CGRect aRect = self.view.bounds;
-//    aRect.size.height -= offset;
-//    NSLog(@"uncovered screen: %f", aRect.size.height);
-//    
-//    CGRect activeFieldBounds = [activeTextField convertRect:activeTextField.bounds toView:scrollContainer];
-//    CGPoint bottomOfBoxPoint = activeFieldBounds.origin;
-//    bottomOfBoxPoint.y += activeFieldBounds.size.height;
-//    
-//    NSLog(@"bottomOfBoxPoint: x: %f, y: %f", bottomOfBoxPoint.x, bottomOfBoxPoint.y);
-//    NSLog(@"aRect origin: x: %f, y: %f", aRect.origin.x, aRect.origin.y);
-//    NSLog(@"aRect size: width: %f, height: %f", aRect.size.width, aRect.size.height);
-//
-//    if (!CGRectContainsPoint(aRect, bottomOfBoxPoint) ) {
-//        CGPoint scrollPoint = CGPointMake(0.0, bottomOfBoxPoint.y - activeFieldBounds.size.height);
-//        [scrollContainer setContentOffset:scrollPoint animated:YES];
-//    }
-//}
-
 - (void)keyboardWillShow:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
@@ -534,15 +500,9 @@ static int letterCount;
     // The screen rect that ISN'T covered by the keyboard.
     CGRect aRect = self.view.bounds;
     aRect.size.height -= offset;
-    NSLog(@"uncovered screen: %f", aRect.size.height);
     
+    // Make active view fill entirty of non-keyboard space
     UIView *parentView = activeTextField.superview;
-    
-    NSLog(@"original parent frame origin: x: %f y: %f", parentView.frame.origin.x, parentView.frame.origin.y);
-    NSLog(@"original parent frame size: width: %f height: %f", parentView.frame.size.width, parentView.frame.size.height);
-    NSLog(@"original parent bounds origin: x: %f y: %f", parentView.bounds.origin.x, parentView.bounds.origin.y);
-    NSLog(@"original parent bounds size: width: %f height: %f", parentView.bounds.size.width, parentView.bounds.size.height);
-    
     activeParentViewFrame = parentView.frame;
     parentView.frame = aRect;
     [parentView.superview bringSubviewToFront:parentView];
@@ -550,23 +510,14 @@ static int letterCount;
     CGRect newBounds = CGRectZero;
     newBounds.size = parentView.frame.size;
     parentView.bounds = newBounds;
-    
-    NSLog(@"new parent frame origin: x: %f y: %f", parentView.frame.origin.x, parentView.frame.origin.y);
-    NSLog(@"new parent frame size: width: %f height: %f", parentView.frame.size.width, parentView.frame.size.height);
-    NSLog(@"new parent bounds origin: x: %f y: %f", parentView.bounds.origin.x, parentView.bounds.origin.y);
-    NSLog(@"new parent bounds size: width: %f height: %f", parentView.bounds.size.width, parentView.bounds.size.height);
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
-//    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-//    scrollContainer.contentInset = contentInsets;
-//    scrollContainer.scrollIndicatorInsets = contentInsets;
+    // Return labels to their original position
     UIView *parentView = activeTextField.superview;
-
     parentView.frame = activeParentViewFrame;
-    
 }
 - (IBAction)dismissKeyboard:(id)sender
 {
