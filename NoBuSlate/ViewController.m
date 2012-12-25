@@ -487,14 +487,13 @@ static int letterCount;
 {
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    NSValue *keybaordShowDurationValue = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval duration = 0;
+    [keybaordShowDurationValue getValue:&duration];
     
     // TODO: Handle portrait mode
     // Keyboard height
     float offset = kbSize.width;
-    
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, offset, 0.0);
-    scrollContainer.contentInset = contentInsets;
-    scrollContainer.scrollIndicatorInsets = contentInsets;
     
     // The screen rect that ISN'T covered by the keyboard.
     CGRect aRect = self.view.bounds;
@@ -503,12 +502,18 @@ static int letterCount;
     // Make active view fill entirty of non-keyboard space
     UIView *parentView = activeTextField.superview;
     activeParentViewFrame = parentView.frame;
-    parentView.frame = aRect;
     [parentView.superview bringSubviewToFront:parentView];
+
+    // Animate the view to fill the available space
+    void (^anim) (void) = ^ {
+        parentView.frame = aRect;
+    };
     
-    CGRect newBounds = CGRectZero;
-    newBounds.size = parentView.frame.size;
-    parentView.bounds = newBounds;
+    [UIView animateWithDuration:duration animations:anim];
+    
+//    CGRect newBounds = CGRectZero;
+//    newBounds.size = parentView.frame.size;
+//    parentView.bounds = newBounds;
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
@@ -516,7 +521,18 @@ static int letterCount;
 {
     // Return labels to their original position
     UIView *parentView = activeTextField.superview;
-    parentView.frame = activeParentViewFrame;
+    
+    NSDictionary* info = [aNotification userInfo];
+    NSValue *keybaordShowDurationValue = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval duration = 0;
+    [keybaordShowDurationValue getValue:&duration];
+    
+    // Animate the view to fill the available space
+    void (^anim) (void) = ^ {
+        parentView.frame = activeParentViewFrame;
+    };
+    
+    [UIView animateWithDuration:duration animations:anim];
 }
 - (IBAction)dismissKeyboard:(id)sender
 {
