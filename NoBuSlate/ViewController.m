@@ -483,13 +483,23 @@ static int letterCount;
 
 #pragma mark - Keyboard methods
 
+- (void)resizeView:(UIView *)aView withRect:(CGRect)aRect duration:(NSNumber *)aDuration
+{
+    [aView.superview bringSubviewToFront:aView];
+    
+    // Animate the view to fill the available space
+    void (^anim) (void) = ^ {
+        aView.frame = aRect;
+    };
+    
+    [UIView animateWithDuration:[aDuration doubleValue] animations:anim];
+}
+
 - (void)keyboardWillShow:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    NSValue *keybaordShowDurationValue = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
-    NSTimeInterval duration = 0;
-    [keybaordShowDurationValue getValue:&duration];
+    NSNumber *keybaordShowDuration = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     
     // TODO: Handle portrait mode
     // Keyboard height
@@ -498,22 +508,12 @@ static int letterCount;
     // The screen rect that ISN'T covered by the keyboard.
     CGRect aRect = self.view.bounds;
     aRect.size.height -= offset;
-    
+
     // Make active view fill entirty of non-keyboard space
     UIView *parentView = activeTextField.superview;
     activeParentViewFrame = parentView.frame;
-    [parentView.superview bringSubviewToFront:parentView];
-
-    // Animate the view to fill the available space
-    void (^anim) (void) = ^ {
-        parentView.frame = aRect;
-    };
     
-    [UIView animateWithDuration:duration animations:anim];
-    
-//    CGRect newBounds = CGRectZero;
-//    newBounds.size = parentView.frame.size;
-//    parentView.bounds = newBounds;
+    [self resizeView:parentView withRect:aRect duration:keybaordShowDuration];
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
@@ -523,16 +523,9 @@ static int letterCount;
     UIView *parentView = activeTextField.superview;
     
     NSDictionary* info = [aNotification userInfo];
-    NSValue *keybaordShowDurationValue = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
-    NSTimeInterval duration = 0;
-    [keybaordShowDurationValue getValue:&duration];
-    
-    // Animate the view to fill the available space
-    void (^anim) (void) = ^ {
-        parentView.frame = activeParentViewFrame;
-    };
-    
-    [UIView animateWithDuration:duration animations:anim];
+    NSNumber *keybaordShowDuration = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+
+    [self resizeView:parentView withRect:activeParentViewFrame duration:keybaordShowDuration];
 }
 - (IBAction)dismissKeyboard:(id)sender
 {

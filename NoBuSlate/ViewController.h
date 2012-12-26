@@ -28,7 +28,6 @@
     IBOutlet UITextField *audioRightChannelField;
     IBOutlet UITextField *currentDateField;
     IBOutlet UITextField *currentTimeField;
-    IBOutlet UIScrollView *scrollContainer;
     
     IBOutlet UILabel *sceneLabel;
     IBOutlet UILabel *takeLabel;

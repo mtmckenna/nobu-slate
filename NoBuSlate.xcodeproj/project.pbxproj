@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9121B6015C25CDD0040E952 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9121B5F15C25CDD0040E952 /* Icon.png */; };
 		C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */; };
-		C961A3B5160D92DF00C3C2E2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */; };
-		C961A3B8160D92ED00C3C2E2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C961A3B7160D92ED00C3C2E2 /* Default@2x.png */; };
-		C961A3BA160D92F700C3C2E2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C961A3B9160D92F700C3C2E2 /* Default.png */; };
+		C95F15CE168A59C3009170B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F15CD168A59C3009170B4 /* Default-568h@2x.png */; };
+		C95F15D5168A65B6009170B4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEC71572D034003A7062 /* SenTestingKit.framework */; };
+		C95F15D6168A65B6009170B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
+		C95F15D7168A65B6009170B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
+		C95F15DD168A65B6009170B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95F15DB168A65B6009170B4 /* InfoPlist.strings */; };
+		C95F15E0168A65B6009170B4 /* NoBuSlateApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */; };
 		C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9794B2B157333860001286C /* NSTimer+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9794B3B15735A450001286C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9794B3A15735A450001286C /* AVFoundation.framework */; };
 		C9A0BEA71572D033003A7062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
@@ -27,15 +29,29 @@
 		C9A0BEC91572D034003A7062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
 		C9A0BECA1572D034003A7062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
 		C9A0BED21572D034003A7062 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A0BED01572D034003A7062 /* InfoPlist.strings */; };
-		C9A0BED51572D034003A7062 /* NoBuSlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BED41572D034003A7062 /* NoBuSlateTests.m */; };
+		C9A0BED51572D034003A7062 /* NoBuSlateLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BED41572D034003A7062 /* NoBuSlateLogicTests.m */; };
 		C9A7DB2015772B80008899EE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7DB1F15772B80008899EE /* AudioToolbox.framework */; };
 		C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2515773B83008899EE /* countdown-finished.wav */; };
 		C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2715773B9D008899EE /* countdown-pulse.wav */; };
+		C9AFC195168A538300546125 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC18E168A538300546125 /* Icon-72.png */; };
+		C9AFC196168A538300546125 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC18F168A538300546125 /* Icon-Small-50.png */; };
+		C9AFC197168A538300546125 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC190168A538300546125 /* Icon-Small-50@2x.png */; };
+		C9AFC198168A538300546125 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC191168A538300546125 /* Icon-Small.png */; };
+		C9AFC199168A538300546125 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC192168A538300546125 /* Icon.png */; };
+		C9AFC19A168A538300546125 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC193168A538300546125 /* Icon@2x.png */; };
+		C9AFC19B168A538300546125 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC194168A538300546125 /* iTunesArtwork.png */; };
 		C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D340D3157C86C900F8D0E4 /* SlateState.m */; };
 		C9DD67791579E4A70024526D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DD67781579E4A70024526D /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C95F160B168A6715009170B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9A0BE991572D033003A7062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9A0BEA11572D033003A7062;
+			remoteInfo = NoBuSlate;
+		};
 		C9A0BECB1572D034003A7062 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9A0BE991572D033003A7062 /* Project object */;
@@ -46,10 +62,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C9121B5F15C25CDD0040E952 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = icons/Icon.png; sourceTree = "<group>"; };
-		C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		C961A3B7160D92ED00C3C2E2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		C961A3B9160D92F700C3C2E2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		C95F15CD168A59C3009170B4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		C95F15D4168A65B6009170B4 /* NoBuSlateApplicationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoBuSlateApplicationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C95F15DA168A65B6009170B4 /* NoBuSlateApplicationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoBuSlateApplicationTests-Info.plist"; sourceTree = "<group>"; };
+		C95F15DC168A65B6009170B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C95F15DE168A65B6009170B4 /* NoBuSlateApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBuSlateApplicationTests.h; sourceTree = "<group>"; };
+		C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBuSlateApplicationTests.m; sourceTree = "<group>"; };
+		C95F15E1168A65B7009170B4 /* NoBuSlateApplicationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoBuSlateApplicationTests-Prefix.pch"; sourceTree = "<group>"; };
 		C9794B2A157333860001286C /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -68,21 +87,38 @@
 		C9A0BEBC1572D033003A7062 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C9A0BEBE1572D033003A7062 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C9A0BEBF1572D034003A7062 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C9A0BEC61572D034003A7062 /* NoBuSlateTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoBuSlateTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A0BEC61572D034003A7062 /* NoBuSlateLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoBuSlateLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A0BEC71572D034003A7062 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C9A0BECF1572D034003A7062 /* NoBuSlateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoBuSlateTests-Info.plist"; sourceTree = "<group>"; };
 		C9A0BED11572D034003A7062 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C9A0BED31572D034003A7062 /* NoBuSlateTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBuSlateTests.h; sourceTree = "<group>"; };
-		C9A0BED41572D034003A7062 /* NoBuSlateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBuSlateTests.m; sourceTree = "<group>"; };
+		C9A0BED31572D034003A7062 /* NoBuSlateLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBuSlateLogicTests.h; sourceTree = "<group>"; };
+		C9A0BED41572D034003A7062 /* NoBuSlateLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBuSlateLogicTests.m; sourceTree = "<group>"; };
 		C9A7DB1F15772B80008899EE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C9A7DB2515773B83008899EE /* countdown-finished.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-finished.wav"; sourceTree = "<group>"; };
 		C9A7DB2715773B9D008899EE /* countdown-pulse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-pulse.wav"; sourceTree = "<group>"; };
+		C9AFC18E168A538300546125 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		C9AFC18F168A538300546125 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		C9AFC190168A538300546125 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		C9AFC191168A538300546125 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		C9AFC192168A538300546125 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C9AFC193168A538300546125 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		C9AFC194168A538300546125 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		C9D340D2157C86C900F8D0E4 /* SlateState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlateState.h; sourceTree = "<group>"; };
 		C9D340D3157C86C900F8D0E4 /* SlateState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlateState.m; sourceTree = "<group>"; };
 		C9DD67781579E4A70024526D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C95F15D0168A65B6009170B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95F15D5168A65B6009170B4 /* SenTestingKit.framework in Frameworks */,
+				C95F15D6168A65B6009170B4 /* UIKit.framework in Frameworks */,
+				C95F15D7168A65B6009170B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9A0BE9F1572D033003A7062 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,6 +145,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C95F15D8168A65B6009170B4 /* NoBuSlateApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				C95F15DE168A65B6009170B4 /* NoBuSlateApplicationTests.h */,
+				C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */,
+				C95F15D9168A65B6009170B4 /* Supporting Files */,
+			);
+			path = NoBuSlateApplicationTests;
+			sourceTree = "<group>";
+		};
+		C95F15D9168A65B6009170B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C95F15DA168A65B6009170B4 /* NoBuSlateApplicationTests-Info.plist */,
+				C95F15DB168A65B6009170B4 /* InfoPlist.strings */,
+				C95F15E1168A65B7009170B4 /* NoBuSlateApplicationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C9794B25157333540001286C /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +185,8 @@
 		C9794B39157359BA0001286C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C961A3B9160D92F700C3C2E2 /* Default.png */,
-				C961A3B7160D92ED00C3C2E2 /* Default@2x.png */,
-				C961A3B4160D92DF00C3C2E2 /* Default-568h@2x.png */,
+				C9AFC18D168A538300546125 /* Icons */,
+				C95F15CD168A59C3009170B4 /* Default-568h@2x.png */,
 				C9A7DB2715773B9D008899EE /* countdown-pulse.wav */,
 				C9A7DB2515773B83008899EE /* countdown-finished.wav */,
 				C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */,
@@ -144,7 +199,8 @@
 			children = (
 				C9794B25157333540001286C /* External */,
 				C9A0BEAC1572D033003A7062 /* NoBuSlate */,
-				C9A0BECD1572D034003A7062 /* NoBuSlateTests */,
+				C9A0BECD1572D034003A7062 /* NoBuSlateLogicTests */,
+				C95F15D8168A65B6009170B4 /* NoBuSlateApplicationTests */,
 				C9A0BEA51572D033003A7062 /* Frameworks */,
 				C9A0BEA31572D033003A7062 /* Products */,
 			);
@@ -154,7 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				C9A0BEA21572D033003A7062 /* NoBuSlate.app */,
-				C9A0BEC61572D034003A7062 /* NoBuSlateTests.octest */,
+				C9A0BEC61572D034003A7062 /* NoBuSlateLogicTests.octest */,
+				C95F15D4168A65B6009170B4 /* NoBuSlateApplicationTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,7 +233,6 @@
 		C9A0BEAC1572D033003A7062 /* NoBuSlate */ = {
 			isa = PBXGroup;
 			children = (
-				C9794B39157359BA0001286C /* Resources */,
 				C9D340D2157C86C900F8D0E4 /* SlateState.h */,
 				C9D340D3157C86C900F8D0E4 /* SlateState.m */,
 				C9A0BEB51572D033003A7062 /* AppDelegate.h */,
@@ -185,6 +241,7 @@
 				C9A0BEBF1572D034003A7062 /* ViewController.m */,
 				C9A0BEB81572D033003A7062 /* MainStoryboard_iPhone.storyboard */,
 				C9A0BEBB1572D033003A7062 /* MainStoryboard_iPad.storyboard */,
+				C9794B39157359BA0001286C /* Resources */,
 				C9A0BEAD1572D033003A7062 /* Supporting Files */,
 			);
 			path = NoBuSlate;
@@ -193,7 +250,6 @@
 		C9A0BEAD1572D033003A7062 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C9121B5F15C25CDD0040E952 /* Icon.png */,
 				C9A0BEAE1572D033003A7062 /* NoBuSlate-Info.plist */,
 				C9A0BEAF1572D033003A7062 /* InfoPlist.strings */,
 				C9A0BEB21572D033003A7062 /* main.m */,
@@ -202,14 +258,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C9A0BECD1572D034003A7062 /* NoBuSlateTests */ = {
+		C9A0BECD1572D034003A7062 /* NoBuSlateLogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				C9A0BED31572D034003A7062 /* NoBuSlateTests.h */,
-				C9A0BED41572D034003A7062 /* NoBuSlateTests.m */,
+				C9A0BED31572D034003A7062 /* NoBuSlateLogicTests.h */,
+				C9A0BED41572D034003A7062 /* NoBuSlateLogicTests.m */,
 				C9A0BECE1572D034003A7062 /* Supporting Files */,
 			);
-			path = NoBuSlateTests;
+			path = NoBuSlateLogicTests;
 			sourceTree = "<group>";
 		};
 		C9A0BECE1572D034003A7062 /* Supporting Files */ = {
@@ -221,9 +277,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9AFC18D168A538300546125 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				C9AFC18E168A538300546125 /* Icon-72.png */,
+				C9AFC18F168A538300546125 /* Icon-Small-50.png */,
+				C9AFC190168A538300546125 /* Icon-Small-50@2x.png */,
+				C9AFC191168A538300546125 /* Icon-Small.png */,
+				C9AFC192168A538300546125 /* Icon.png */,
+				C9AFC193168A538300546125 /* Icon@2x.png */,
+				C9AFC194168A538300546125 /* iTunesArtwork.png */,
+			);
+			name = Icons;
+			path = icons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C95F15D3168A65B6009170B4 /* NoBuSlateApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C95F15E2168A65B7009170B4 /* Build configuration list for PBXNativeTarget "NoBuSlateApplicationTests" */;
+			buildPhases = (
+				C95F15CF168A65B6009170B4 /* Sources */,
+				C95F15D0168A65B6009170B4 /* Frameworks */,
+				C95F15D1168A65B6009170B4 /* Resources */,
+				C95F15D2168A65B6009170B4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C95F160C168A6715009170B4 /* PBXTargetDependency */,
+			);
+			name = NoBuSlateApplicationTests;
+			productName = NoBuSlateApplicationTests;
+			productReference = C95F15D4168A65B6009170B4 /* NoBuSlateApplicationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		C9A0BEA11572D033003A7062 /* NoBuSlate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9A0BED81572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlate" */;
@@ -241,9 +331,9 @@
 			productReference = C9A0BEA21572D033003A7062 /* NoBuSlate.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C9A0BEC51572D034003A7062 /* NoBuSlateTests */ = {
+		C9A0BEC51572D034003A7062 /* NoBuSlateLogicTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlateTests" */;
+			buildConfigurationList = C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlateLogicTests" */;
 			buildPhases = (
 				C9A0BEC11572D034003A7062 /* Sources */,
 				C9A0BEC21572D034003A7062 /* Frameworks */,
@@ -255,9 +345,9 @@
 			dependencies = (
 				C9A0BECC1572D034003A7062 /* PBXTargetDependency */,
 			);
-			name = NoBuSlateTests;
+			name = NoBuSlateLogicTests;
 			productName = NoBuSlateTests;
-			productReference = C9A0BEC61572D034003A7062 /* NoBuSlateTests.octest */;
+			productReference = C9A0BEC61572D034003A7062 /* NoBuSlateLogicTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -281,12 +371,21 @@
 			projectRoot = "";
 			targets = (
 				C9A0BEA11572D033003A7062 /* NoBuSlate */,
-				C9A0BEC51572D034003A7062 /* NoBuSlateTests */,
+				C9A0BEC51572D034003A7062 /* NoBuSlateLogicTests */,
+				C95F15D3168A65B6009170B4 /* NoBuSlateApplicationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C95F15D1168A65B6009170B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95F15DD168A65B6009170B4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9A0BEA01572D033003A7062 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,10 +395,14 @@
 				C9A0BEBD1572D033003A7062 /* MainStoryboard_iPad.storyboard in Resources */,
 				C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */,
 				C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */,
-				C9121B6015C25CDD0040E952 /* Icon.png in Resources */,
-				C961A3B5160D92DF00C3C2E2 /* Default-568h@2x.png in Resources */,
-				C961A3B8160D92ED00C3C2E2 /* Default@2x.png in Resources */,
-				C961A3BA160D92F700C3C2E2 /* Default.png in Resources */,
+				C9AFC195168A538300546125 /* Icon-72.png in Resources */,
+				C9AFC196168A538300546125 /* Icon-Small-50.png in Resources */,
+				C9AFC197168A538300546125 /* Icon-Small-50@2x.png in Resources */,
+				C9AFC198168A538300546125 /* Icon-Small.png in Resources */,
+				C9AFC199168A538300546125 /* Icon.png in Resources */,
+				C9AFC19A168A538300546125 /* Icon@2x.png in Resources */,
+				C9AFC19B168A538300546125 /* iTunesArtwork.png in Resources */,
+				C95F15CE168A59C3009170B4 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +417,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C95F15D2168A65B6009170B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		C9A0BEC41572D034003A7062 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +446,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C95F15CF168A65B6009170B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95F15E0168A65B6009170B4 /* NoBuSlateApplicationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9A0BE9E1572D033003A7062 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,13 +471,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A0BED51572D034003A7062 /* NoBuSlateTests.m in Sources */,
+				C9A0BED51572D034003A7062 /* NoBuSlateLogicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C95F160C168A6715009170B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9A0BEA11572D033003A7062 /* NoBuSlate */;
+			targetProxy = C95F160B168A6715009170B4 /* PBXContainerItemProxy */;
+		};
 		C9A0BECC1572D034003A7062 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9A0BEA11572D033003A7062 /* NoBuSlate */;
@@ -362,6 +491,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C95F15DB168A65B6009170B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C95F15DC168A65B6009170B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		C9A0BEAF1572D033003A7062 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -397,6 +534,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C95F15E3168A65B7009170B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C95F15E4168A65B7009170B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		C9A0BED61572D034003A7062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -476,7 +660,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
-				INFOPLIST_FILE = "NoBuSlateTests/NoBuSlateTests-Info.plist";
+				INFOPLIST_FILE = "NoBuSlateLogicTests/NoBuSlateTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -493,7 +677,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
-				INFOPLIST_FILE = "NoBuSlateTests/NoBuSlateTests-Info.plist";
+				INFOPLIST_FILE = "NoBuSlateLogicTests/NoBuSlateTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -503,6 +687,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C95F15E2168A65B7009170B4 /* Build configuration list for PBXNativeTarget "NoBuSlateApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C95F15E3168A65B7009170B4 /* Debug */,
+				C95F15E4168A65B7009170B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C9A0BE9C1572D033003A7062 /* Build configuration list for PBXProject "NoBuSlate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -521,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlateTests" */ = {
+		C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlateLogicTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A0BEDC1572D034003A7062 /* Debug */,
