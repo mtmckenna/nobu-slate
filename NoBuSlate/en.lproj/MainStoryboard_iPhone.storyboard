@@ -125,16 +125,23 @@
                                 <rect key="frame" x="319" y="208" width="141" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="L:" lineBreakMode="tailTruncation" minimumFontSize="10" id="Aio-kS-hfJ">
-                                        <rect key="frame" x="2" y="21" width="20" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="L:" lineBreakMode="tailTruncation" minimumFontSize="17" id="Aio-kS-hfJ">
+                                        <rect key="frame" x="4" y="26" width="20" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="R:" lineBreakMode="tailTruncation" minimumFontSize="10" id="akm-Q0-rKo">
-                                        <rect key="frame" x="2" y="45" width="20" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" minimumFontSize="10" id="QNH-ib-kdh">
+                                        <rect key="frame" x="24" y="24" width="117" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="R:" lineBreakMode="tailTruncation" minimumFontSize="17" id="akm-Q0-rKo">
+                                        <rect key="frame" x="2" y="44" width="20" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -146,16 +153,9 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" minimumFontSize="17" id="QNH-ib-kdh">
-                                        <rect key="frame" x="30" y="21" width="109" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="---" minimumFontSize="17" id="19o-Y4-Peo">
-                                        <rect key="frame" x="30" y="45" width="109" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="24" y="44" width="117" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -168,9 +168,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Production" minimumFontSize="17" clearButtonMode="whileEditing" id="1WE-Si-hhd">
-                                        <rect key="frame" x="0.0" y="-1" width="440" height="31"/>
+                                        <rect key="frame" x="0.0" y="-1" width="439" height="32"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -269,10 +268,8 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
-                <relationship kind="action" name="dismissKeyboard:"/>
                 <relationship kind="action" name="handleDownSwipe:"/>
                 <relationship kind="action" name="handleSideSwipe:"/>
-                <relationship kind="action" name="handleTap:"/>
                 <relationship kind="action" name="handleUpSwipe:"/>
                 <relationship kind="outlet" name="audioFileLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="audioFileNameField" candidateClass="UITextField"/>
@@ -292,7 +289,6 @@
                 <relationship kind="outlet" name="sceneLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="sceneStringField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="sceneStringView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="scrollContainer" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="takeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="takeNumberField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="takeNumberView" candidateClass="UIView"/>

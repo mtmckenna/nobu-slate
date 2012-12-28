@@ -14,6 +14,7 @@
 		C95F15D7168A65B6009170B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
 		C95F15DD168A65B6009170B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95F15DB168A65B6009170B4 /* InfoPlist.strings */; };
 		C95F15E0168A65B6009170B4 /* NoBuSlateApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */; };
+		C95F1616168D2A49009170B4 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F1615168D2A49009170B4 /* iTunesArtwork@2x.png */; };
 		C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9794B2B157333860001286C /* NSTimer+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9794B3B15735A450001286C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9794B3A15735A450001286C /* AVFoundation.framework */; };
 		C9A0BEA71572D033003A7062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
@@ -69,6 +70,7 @@
 		C95F15DE168A65B6009170B4 /* NoBuSlateApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBuSlateApplicationTests.h; sourceTree = "<group>"; };
 		C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBuSlateApplicationTests.m; sourceTree = "<group>"; };
 		C95F15E1168A65B7009170B4 /* NoBuSlateApplicationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoBuSlateApplicationTests-Prefix.pch"; sourceTree = "<group>"; };
+		C95F1615168D2A49009170B4 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		C9794B2A157333860001286C /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -287,6 +289,7 @@
 				C9AFC192168A538300546125 /* Icon.png */,
 				C9AFC193168A538300546125 /* Icon@2x.png */,
 				C9AFC194168A538300546125 /* iTunesArtwork.png */,
+				C95F1615168D2A49009170B4 /* iTunesArtwork@2x.png */,
 			);
 			name = Icons;
 			path = icons;
@@ -403,6 +406,7 @@
 				C9AFC19A168A538300546125 /* Icon@2x.png in Resources */,
 				C9AFC19B168A538300546125 /* iTunesArtwork.png in Resources */,
 				C95F15CE168A59C3009170B4 /* Default-568h@2x.png in Resources */,
+				C95F1616168D2A49009170B4 /* iTunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +698,7 @@
 				C95F15E4168A65B7009170B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9A0BE9C1572D033003A7062 /* Build configuration list for PBXProject "NoBuSlate" */ = {
 			isa = XCConfigurationList;

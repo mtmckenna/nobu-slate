@@ -485,7 +485,7 @@ static int letterCount;
 
 - (void)resizeView:(UIView *)aView withRect:(CGRect)aRect duration:(NSNumber *)aDuration
 {
-    [aView.superview bringSubviewToFront:aView];
+    [self.view bringSubviewToFront:aView];
     
     // Animate the view to fill the available space
     void (^anim) (void) = ^ {
