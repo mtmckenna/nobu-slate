@@ -13,7 +13,6 @@
 
 
 // TODO: integration tests:
-// * switching between boxes while keyboard is up
 // * moving boxes up
 // * test saving and loading from save
 

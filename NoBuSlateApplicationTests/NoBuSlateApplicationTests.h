@@ -7,7 +7,13 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+@class AppDelegate;
+@class ViewController;
 
 @interface NoBuSlateApplicationTests : SenTestCase
+{
+    AppDelegate *appDelegate;
+    ViewController *viewController;
+}
 
 @end
