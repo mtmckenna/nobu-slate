@@ -88,9 +88,4 @@
     }
 }
 
-- (void)testDisableSlateWhenEditingFields
-{
-    
-}
-
 @end
