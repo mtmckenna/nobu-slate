@@ -669,22 +669,14 @@ static int letterCount;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-        interfaceOrientation == UIInterfaceOrientationLandscapeRight)
+{    
+    if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft)
     {
         return YES;
     }
     else
     {
         return NO;
-    }
-    
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
     }
 }
 
