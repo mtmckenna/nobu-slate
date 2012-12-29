@@ -466,11 +466,6 @@ static int letterCount;
     }
 }
 
-- (IBAction)handleSideSwipe:(id)sender
-{
-    [self toggleCountdown];
-}
-
 - (IBAction)handleTap:(id)sender
 {
     // Hide keyboard. This is mainly here because the number pad doesn't have
@@ -479,6 +474,13 @@ static int letterCount;
     {
         [self textFieldDidEndEditing:activeTextField];
     }
+}
+
+- (IBAction)handleSideSwipe:(id)sender
+{
+    if (activeTextField.isEditing) return;
+    
+    [self toggleCountdown];
 }
 
 #pragma mark - Keyboard methods
