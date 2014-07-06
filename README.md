@@ -21,14 +21,14 @@ Screenshots:
 
 The slate initially looks like this:
 
-![The slate initially looks like this](http://mtmckenna.github.com/nobu-slate/img/nobu-slate-normal.png)
+![The slate initially looks like this](http://mtmckenna.github.io/nobu-slate/images/nobu-slate-normal.png)
 
 After swiping horizontally, a countdown starts. A pulse sound is played and the slate
 flashes colors so that external audio can be matched to the video:
 
-![Slate flashes red during countdown](http://mtmckenna.github.com/nobu-slate/img/nobu-slate-countdown.png)
+![Slate flashes red during countdown](http://mtmckenna.github.io/nobu-slate/images/nobu-slate-countdown.png)
 
 After the countdown ends, the app flashes as in the screenshot below, and another
 sound is played to help match audio/video:
 
-![Slate flashes green when it claps](http://mtmckenna.github.com/nobu-slate/img/nobu-slate-clap.png)
+![Slate flashes green when it claps](http://mtmckenna.github.io/nobu-slate/images/nobu-slate-clap.png)
