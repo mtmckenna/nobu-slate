@@ -45,6 +45,8 @@
 		C9AFC199168A538300546125 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC192168A538300546125 /* Icon.png */; };
 		C9AFC19A168A538300546125 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC193168A538300546125 /* Icon@2x.png */; };
 		C9AFC19B168A538300546125 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC194168A538300546125 /* iTunesArtwork.png */; };
+		C9B2860E196A421D00273BAF /* AudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B2860D196A421D00273BAF /* AudioHelper.m */; };
+		C9B28613196A4FDA00273BAF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B28612196A4FDA00273BAF /* Constants.m */; };
 		C9BDF2941969F5A000606103 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91C382E1969F087009EFD92 /* XCTest.framework */; };
 		C9BDF2951969F5A000606103 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
 		C9BDF2961969F5A000606103 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
@@ -124,6 +126,10 @@
 		C9AFC192168A538300546125 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C9AFC193168A538300546125 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C9AFC194168A538300546125 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		C9B2860C196A421D00273BAF /* AudioHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioHelper.h; sourceTree = "<group>"; };
+		C9B2860D196A421D00273BAF /* AudioHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioHelper.m; sourceTree = "<group>"; };
+		C9B28611196A4F0800273BAF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		C9B28612196A4FDA00273BAF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C9BDF2931969F5A000606103 /* Acceptance Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acceptance Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BDF2991969F5A000606103 /* Acceptance Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Acceptance Tests-Info.plist"; sourceTree = "<group>"; };
 		C9BDF29B1969F5A000606103 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -252,6 +258,8 @@
 		C9A0BEAC1572D033003A7062 /* NoBuSlate */ = {
 			isa = PBXGroup;
 			children = (
+				C9B28611196A4F0800273BAF /* Constants.h */,
+				C9B28612196A4FDA00273BAF /* Constants.m */,
 				C9D340D2157C86C900F8D0E4 /* SlateState.h */,
 				C9D340D3157C86C900F8D0E4 /* SlateState.m */,
 				C9A0BEB51572D033003A7062 /* AppDelegate.h */,
@@ -345,6 +353,8 @@
 		C9F053351969E9F300F071A8 /* Service Objects */ = {
 			isa = PBXGroup;
 			children = (
+				C9B2860C196A421D00273BAF /* AudioHelper.h */,
+				C9B2860D196A421D00273BAF /* AudioHelper.m */,
 			);
 			name = "Service Objects";
 			sourceTree = "<group>";
@@ -603,8 +613,10 @@
 				C9A0BEB31572D033003A7062 /* main.m in Sources */,
 				C9A0BEB71572D033003A7062 /* AppDelegate.m in Sources */,
 				C9A0BEC01572D034003A7062 /* ViewController.m in Sources */,
+				C9B28613196A4FDA00273BAF /* Constants.m in Sources */,
 				C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */,
 				C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */,
+				C9B2860E196A421D00273BAF /* AudioHelper.m in Sources */,
 				C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

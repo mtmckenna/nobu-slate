@@ -4,7 +4,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreData/CoreData.h>
 
-@interface ViewController : UIViewController <UITextFieldDelegate, AVAudioPlayerDelegate, NSFetchedResultsControllerDelegate>
+@interface ViewController : UIViewController <UITextFieldDelegate, NSFetchedResultsControllerDelegate>
 {    
     IBOutlet UITextField *productionNameField;
     IBOutlet UITextField *sceneStringField;
@@ -51,7 +51,6 @@
 
 - (void)restoreColors;
 - (void)updateDateAndTime;
-- (void)prepareAudioFiles;
 
 - (void)startCountdown;
 - (void)resetCountdown;

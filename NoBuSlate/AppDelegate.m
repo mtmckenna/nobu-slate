@@ -1,8 +1,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import <AudioToolbox/AudioToolbox.h>
 #import <CoreData/CoreData.h>
+#import "AudioHelper.h"
 
 #ifdef TRACKING
 #import "Flurry.h"
@@ -80,17 +80,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self initializeServices];
+    [AudioHelper configureAudio];
     ViewController *viewController = (ViewController *)self.window.rootViewController;
     viewController.managedObjectContext = self.managedObjectContext;
     
-    // Route audio through speakers rather than headset
-    // TODO: confirm this does what I think it does...
-    UInt32 sessionCategory = kAudioSessionCategory_MediaPlayback;
-    AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(sessionCategory), &sessionCategory);    
-    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
-    AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
-        
-    // Override point for customization after application launch.
     return YES;
 }
 

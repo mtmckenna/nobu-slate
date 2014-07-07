@@ -1,6 +1,12 @@
 #import "ViewController.h"
 #import "NSTimer+Blocks.h"
 #import "SlateState.h"
+#import "AudioHelper.h"
+#import "Constants.h"
+
+@interface ViewController()
+@property (nonatomic, strong) AudioHelper *audioHelper;
+@end
 
 @implementation ViewController
 
@@ -16,8 +22,6 @@
 
 long MIN = 60;
 
-AVAudioPlayer *audioPlayerPulse;
-AVAudioPlayer *audioPlayerFinished;
 UITextField *activeTextField;
 CGRect activeParentViewFrame;
 
@@ -46,10 +50,8 @@ static int letterCount;
     void (^myBlock)() = ^() {        
         currentCountdown = currentCountdown - 1;
         
-        if ([audioPlayerPulse isPlaying])
-        {
-            [audioPlayerPulse stop];
-        }
+        if ([self.audioHelper isPlaying])
+            [self.audioHelper stopPlayingPulse];
         
         // Reached end of countdown
         if (currentCountdown <= 0)
@@ -58,14 +60,14 @@ static int letterCount;
                                      textColor:[UIColor blackColor]
                            textBackgroundColor:self.pulseColor];
             
-            [audioPlayerFinished play];
+            [self.audioHelper playFinished];
         }
         else 
         {
             [self setColorsWithBackgroundColor:[UIColor blackColor] 
                                      textColor:[UIColor whiteColor]
                            textBackgroundColor:self.goColor];
-            [audioPlayerPulse play]; 
+            [self.audioHelper playPulse];
         }        
     };
     
@@ -76,7 +78,7 @@ static int letterCount;
     [self setColorsWithBackgroundColor:[UIColor blackColor] 
                              textColor:[UIColor whiteColor]
                    textBackgroundColor:self.goColor];
-    [audioPlayerPulse play];
+    [self.audioHelper playPulse];
     
 }
 
@@ -86,40 +88,10 @@ static int letterCount;
     countdownTimer = nil;
 }
 
-#pragma mark - Audio methods
-
-- (void)prepareAudioFiles
+- (void)didPlayAudioOfType:(NSString *)audioType
 {
-    // TODO: handle error
-    
-    // Countdown up ping sounds
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"countdown-pulse" ofType: @"wav"];        
-    NSURL *fileUrl = [[NSURL alloc] initFileURLWithPath:soundFilePath];   
-    audioPlayerPulse = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:nil];
-    
-    // "Go" ping sound
-    soundFilePath = [[NSBundle mainBundle] pathForResource: @"countdown-finished" ofType: @"wav"];
-    fileUrl = [[NSURL alloc] initFileURLWithPath:soundFilePath];   
-    audioPlayerFinished = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:nil];
-    
-    audioPlayerFinished.delegate = self;
-    audioPlayerPulse.delegate = self;
-    
-    [audioPlayerFinished prepareToPlay];
-    [audioPlayerPulse prepareToPlay];
-}
-
-- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
-{
-    NSLog(@"%@ has error: %@", player, error);
-}
-
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
-{
-    if (player == audioPlayerFinished)
-    {
+    if (audioType == kAudioFinished)
         [self resetCountdown];
-    }
          
     [self restoreColors];    
 }
@@ -400,6 +372,18 @@ static int letterCount;
     takeNumberField.inputAccessoryView = numberToolbar;
 }
 
+- (void)configureSceneAlphabet
+{
+    // Skip I and O since they can be confused for a number
+    sceneAlphabet = [NSArray arrayWithObjects:
+                     @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"J",
+                     @"K", @"L", @"M", @"N", @"P", @"Q", @"R", @"S", @"T",
+                     @"U", @"V", @"W", @"X", @"Y", @"Z",
+                     nil];
+
+    letterCount = [sceneAlphabet count];
+}
+
 #pragma mark - Handle gestures
 
 - (IBAction)handleUpSwipe:(id)sender
@@ -537,17 +521,11 @@ static int letterCount;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.audioHelper = [[AudioHelper alloc] initWithDelegate:self];
+    [self.audioHelper prepareAudioFiles];
     
-    // Skip I and O since they can be confused for a number
-    sceneAlphabet =[NSArray arrayWithObjects:
-                    @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"J", 
-                    @"K", @"L", @"M", @"N", @"P", @"Q", @"R", @"S", @"T", 
-                    @"U", @"V", @"W", @"X", @"Y", @"Z",
-                    nil];
-    
-    letterCount = [sceneAlphabet count];
-    
-    [self prepareAudioFiles];
+    [self configureSceneAlphabet];
     [self updateDateAndTime];
     
     productionNameField.delegate = self;
