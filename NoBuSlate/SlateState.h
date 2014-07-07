@@ -1,11 +1,3 @@
-//
-//  SlateState.h
-//  NoBuSlate
-//
-//  Created by Matthew McKenna on 6/3/12.
-//  Copyright (c) 2012 Matthew McKenna. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 

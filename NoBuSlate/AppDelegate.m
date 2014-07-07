@@ -1,16 +1,13 @@
-//
-//  AppDelegate.m
-//  NoBuSlate
-//
-//  Created by Matthew McKenna on 5/27/12.
-//  Copyright (c) 2012 Matthew McKenna. All rights reserved.
-//
-
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreData/CoreData.h>
+
+#ifdef TRACKING
+#import "Flurry.h"
+#import <Crashlytics/Crashlytics.h>
+#endif
 
 @implementation AppDelegate
 
@@ -82,6 +79,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self initializeServices];
     ViewController *viewController = (ViewController *)self.window.rootViewController;
     viewController.managedObjectContext = self.managedObjectContext;
     
@@ -94,6 +92,28 @@
         
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)initializeServices
+{
+#ifdef TRACKING
+    [Flurry startSession:self.keysDictionary[@"Flurry"]];
+    [Flurry setCrashReportingEnabled:NO];
+#endif
+
+#ifdef TRACKING
+    [Crashlytics startWithAPIKey:self.keysDictionary[@"Crashlytics"]];
+#endif
+}
+
+- (NSDictionary *)keysDictionary
+{
+    if (!_keysDictionary)
+    {
+        NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"];
+        _keysDictionary = [[NSDictionary alloc] initWithContentsOfFile:keyPath];
+    }
+    return _keysDictionary;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

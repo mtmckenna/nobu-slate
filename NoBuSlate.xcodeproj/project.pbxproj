@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91C382F1969F087009EFD92 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91C382E1969F087009EFD92 /* XCTest.framework */; };
 		C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */; };
-		C95F15D5168A65B6009170B4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEC71572D034003A7062 /* SenTestingKit.framework */; };
-		C95F15D6168A65B6009170B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
-		C95F15D7168A65B6009170B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
-		C95F15DD168A65B6009170B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95F15DB168A65B6009170B4 /* InfoPlist.strings */; };
-		C95F15E0168A65B6009170B4 /* NoBuSlateApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */; };
+		C92A6F881969FB51008E8DDB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92A6F871969FB51008E8DDB /* Crashlytics.framework */; };
+		C92A6F8C196A0DEF008E8DDB /* KIFUITestActor+NoBuSlate.m in Sources */ = {isa = PBXBuildFile; fileRef = C92A6F8B196A0DEF008E8DDB /* KIFUITestActor+NoBuSlate.m */; };
 		C95F1616168D2A49009170B4 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F1615168D2A49009170B4 /* iTunesArtwork@2x.png */; };
 		C95F161F168D7CBA009170B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F1618168D7CBA009170B4 /* Default-568h@2x.png */; };
 		C95F1620168D7CBA009170B4 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F1619168D7CBA009170B4 /* Default-Landscape.png */; };
@@ -23,40 +21,7 @@
 		C95F1625168D7CBA009170B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F161E168D7CBA009170B4 /* Default@2x.png */; };
 		C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9794B2B157333860001286C /* NSTimer+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9794B3B15735A450001286C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9794B3A15735A450001286C /* AVFoundation.framework */; };
-		C983E4BC168E971D0007CE70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BEB21572D033003A7062 /* main.m */; };
-		C983E4BD168E971D0007CE70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BEB61572D033003A7062 /* AppDelegate.m */; };
-		C983E4BE168E971D0007CE70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BEBF1572D034003A7062 /* ViewController.m */; };
-		C983E4BF168E971D0007CE70 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C9794B2B157333860001286C /* NSTimer+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C983E4C0168E971D0007CE70 /* NoBuSlate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */; };
-		C983E4C1168E971D0007CE70 /* SlateState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D340D3157C86C900F8D0E4 /* SlateState.m */; };
-		C983E4C3168E971D0007CE70 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DD67781579E4A70024526D /* CoreData.framework */; };
-		C983E4C4168E971D0007CE70 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7DB1F15772B80008899EE /* AudioToolbox.framework */; };
-		C983E4C5168E971D0007CE70 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9794B3A15735A450001286C /* AVFoundation.framework */; };
-		C983E4C6168E971D0007CE70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
-		C983E4C7168E971D0007CE70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
-		C983E4C8168E971D0007CE70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEAA1572D033003A7062 /* CoreGraphics.framework */; };
-		C983E4CA168E971D0007CE70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A0BEAF1572D033003A7062 /* InfoPlist.strings */; };
-		C983E4CB168E971D0007CE70 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A0BEB81572D033003A7062 /* MainStoryboard_iPhone.storyboard */; };
-		C983E4CC168E971D0007CE70 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A0BEBB1572D033003A7062 /* MainStoryboard_iPad.storyboard */; };
-		C983E4CD168E971D0007CE70 /* countdown-finished.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2515773B83008899EE /* countdown-finished.wav */; };
-		C983E4CE168E971D0007CE70 /* countdown-pulse.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2715773B9D008899EE /* countdown-pulse.wav */; };
-		C983E4CF168E971D0007CE70 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC18E168A538300546125 /* Icon-72.png */; };
-		C983E4D0168E971D0007CE70 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC18F168A538300546125 /* Icon-Small-50.png */; };
-		C983E4D1168E971D0007CE70 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC190168A538300546125 /* Icon-Small-50@2x.png */; };
-		C983E4D2168E971D0007CE70 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC191168A538300546125 /* Icon-Small.png */; };
-		C983E4D3168E971D0007CE70 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC192168A538300546125 /* Icon.png */; };
-		C983E4D4168E971D0007CE70 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC193168A538300546125 /* Icon@2x.png */; };
-		C983E4D5168E971D0007CE70 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC194168A538300546125 /* iTunesArtwork.png */; };
-		C983E4D6168E971D0007CE70 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F1615168D2A49009170B4 /* iTunesArtwork@2x.png */; };
-		C983E4D7168E971D0007CE70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F1618168D7CBA009170B4 /* Default-568h@2x.png */; };
-		C983E4D8168E971D0007CE70 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F1619168D7CBA009170B4 /* Default-Landscape.png */; };
-		C983E4D9168E971D0007CE70 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F161A168D7CBA009170B4 /* Default-Landscape@2x.png */; };
-		C983E4DA168E971D0007CE70 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F161B168D7CBA009170B4 /* Default-Portrait.png */; };
-		C983E4DB168E971D0007CE70 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F161C168D7CBA009170B4 /* Default-Portrait@2x.png */; };
-		C983E4DC168E971D0007CE70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F161D168D7CBA009170B4 /* Default.png */; };
-		C983E4DD168E971D0007CE70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C95F161E168D7CBA009170B4 /* Default@2x.png */; };
 		C983E4E7168E9E870007CE70 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C983E4E6168E9E870007CE70 /* Icon-Small@2x.png */; };
-		C983E4E8168E9E870007CE70 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C983E4E6168E9E870007CE70 /* Icon-Small@2x.png */; };
 		C9A0BEA71572D033003A7062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
 		C9A0BEA91572D033003A7062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
 		C9A0BEAB1572D033003A7062 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEAA1572D033003A7062 /* CoreGraphics.framework */; };
@@ -66,11 +31,10 @@
 		C9A0BEBA1572D033003A7062 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A0BEB81572D033003A7062 /* MainStoryboard_iPhone.storyboard */; };
 		C9A0BEBD1572D033003A7062 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A0BEBB1572D033003A7062 /* MainStoryboard_iPad.storyboard */; };
 		C9A0BEC01572D034003A7062 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BEBF1572D034003A7062 /* ViewController.m */; };
-		C9A0BEC81572D034003A7062 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEC71572D034003A7062 /* SenTestingKit.framework */; };
 		C9A0BEC91572D034003A7062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
 		C9A0BECA1572D034003A7062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
 		C9A0BED21572D034003A7062 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9A0BED01572D034003A7062 /* InfoPlist.strings */; };
-		C9A0BED51572D034003A7062 /* NoBuSlateLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BED41572D034003A7062 /* NoBuSlateLogicTests.m */; };
+		C9A0BED51572D034003A7062 /* NoBuSlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0BED41572D034003A7062 /* NoBuSlateTests.m */; };
 		C9A7DB2015772B80008899EE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7DB1F15772B80008899EE /* AudioToolbox.framework */; };
 		C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2515773B83008899EE /* countdown-finished.wav */; };
 		C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9A7DB2715773B9D008899EE /* countdown-pulse.wav */; };
@@ -81,19 +45,27 @@
 		C9AFC199168A538300546125 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC192168A538300546125 /* Icon.png */; };
 		C9AFC19A168A538300546125 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC193168A538300546125 /* Icon@2x.png */; };
 		C9AFC19B168A538300546125 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC194168A538300546125 /* iTunesArtwork.png */; };
+		C9BDF2941969F5A000606103 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91C382E1969F087009EFD92 /* XCTest.framework */; };
+		C9BDF2951969F5A000606103 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
+		C9BDF2961969F5A000606103 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA61572D033003A7062 /* UIKit.framework */; };
+		C9BDF29C1969F5A000606103 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9BDF29A1969F5A000606103 /* InfoPlist.strings */; };
+		C9BDF29E1969F5A000606103 /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDF29D1969F5A000606103 /* AcceptanceTests.m */; };
+		C9BDF2A71969F7DF00606103 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BDF2A61969F7DF00606103 /* Keys.plist */; };
 		C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D340D3157C86C900F8D0E4 /* SlateState.m */; };
 		C9DD67791579E4A70024526D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DD67781579E4A70024526D /* CoreData.framework */; };
+		E90CECFC56D547E1BD9D28D1 /* libPods-Acceptance Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9549FC6CC0AF47A2BE472176 /* libPods-Acceptance Tests.a */; };
+		FE1EB642AB794AF695BEF365 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7229F158C5D74CAFA5B5D154 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C95F160B168A6715009170B4 /* PBXContainerItemProxy */ = {
+		C9A0BECB1572D034003A7062 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9A0BE991572D033003A7062 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C9A0BEA11572D033003A7062;
 			remoteInfo = NoBuSlate;
 		};
-		C9A0BECB1572D034003A7062 /* PBXContainerItemProxy */ = {
+		C9BDF2A01969F5A000606103 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9A0BE991572D033003A7062 /* Project object */;
 			proxyType = 1;
@@ -103,12 +75,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C95F15D4168A65B6009170B4 /* NoBuSlateApplicationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoBuSlateApplicationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C95F15DA168A65B6009170B4 /* NoBuSlateApplicationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoBuSlateApplicationTests-Info.plist"; sourceTree = "<group>"; };
-		C95F15DC168A65B6009170B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C95F15DE168A65B6009170B4 /* NoBuSlateApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBuSlateApplicationTests.h; sourceTree = "<group>"; };
-		C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBuSlateApplicationTests.m; sourceTree = "<group>"; };
-		C95F15E1168A65B7009170B4 /* NoBuSlateApplicationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoBuSlateApplicationTests-Prefix.pch"; sourceTree = "<group>"; };
+		000A6EAD827441B49EF0D641 /* libPods-NoBuSlate AcceptanceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NoBuSlate AcceptanceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24F5FD25CC5A4806A542238B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7229F158C5D74CAFA5B5D154 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9549FC6CC0AF47A2BE472176 /* libPods-Acceptance Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Acceptance Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91C382E1969F087009EFD92 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C92A6F871969FB51008E8DDB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		C92A6F8A196A0DEF008E8DDB /* KIFUITestActor+NoBuSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFUITestActor+NoBuSlate.h"; sourceTree = "<group>"; };
+		C92A6F8B196A0DEF008E8DDB /* KIFUITestActor+NoBuSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFUITestActor+NoBuSlate.m"; sourceTree = "<group>"; };
 		C95F1615168D2A49009170B4 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		C95F1618168D7CBA009170B4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C95F1619168D7CBA009170B4 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
@@ -121,7 +95,6 @@
 		C9794B2B157333860001286C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NoBuSlate/external/NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C9794B3A15735A450001286C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C9794B3D157361080001286C /* NoBuSlate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoBuSlate.xcdatamodel; sourceTree = "<group>"; };
-		C983E4E1168E971D0007CE70 /* NoBuSlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBuSlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C983E4E6168E9E870007CE70 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		C9A0BEA21572D033003A7062 /* NoBuSlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBuSlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A0BEA61572D033003A7062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -137,12 +110,10 @@
 		C9A0BEBC1572D033003A7062 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C9A0BEBE1572D033003A7062 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C9A0BEBF1572D034003A7062 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C9A0BEC61572D034003A7062 /* NoBuSlateLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoBuSlateLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9A0BEC71572D034003A7062 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C9A0BEC61572D034003A7062 /* NoBuSlate Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NoBuSlate Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A0BECF1572D034003A7062 /* NoBuSlateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoBuSlateTests-Info.plist"; sourceTree = "<group>"; };
 		C9A0BED11572D034003A7062 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C9A0BED31572D034003A7062 /* NoBuSlateLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBuSlateLogicTests.h; sourceTree = "<group>"; };
-		C9A0BED41572D034003A7062 /* NoBuSlateLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBuSlateLogicTests.m; sourceTree = "<group>"; };
+		C9A0BED41572D034003A7062 /* NoBuSlateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBuSlateTests.m; sourceTree = "<group>"; };
 		C9A7DB1F15772B80008899EE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C9A7DB2515773B83008899EE /* countdown-finished.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-finished.wav"; sourceTree = "<group>"; };
 		C9A7DB2715773B9D008899EE /* countdown-pulse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-pulse.wav"; sourceTree = "<group>"; };
@@ -153,45 +124,32 @@
 		C9AFC192168A538300546125 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C9AFC193168A538300546125 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C9AFC194168A538300546125 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		C9BDF2931969F5A000606103 /* Acceptance Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acceptance Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BDF2991969F5A000606103 /* Acceptance Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Acceptance Tests-Info.plist"; sourceTree = "<group>"; };
+		C9BDF29B1969F5A000606103 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9BDF29D1969F5A000606103 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
+		C9BDF29F1969F5A000606103 /* Acceptance Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acceptance Tests-Prefix.pch"; sourceTree = "<group>"; };
+		C9BDF2A61969F7DF00606103 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		C9D340D2157C86C900F8D0E4 /* SlateState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlateState.h; sourceTree = "<group>"; };
 		C9D340D3157C86C900F8D0E4 /* SlateState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlateState.m; sourceTree = "<group>"; };
 		C9DD67781579E4A70024526D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FBC94D77382B49E5884F7C43 /* Pods-NoBuSlate AcceptanceTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoBuSlate AcceptanceTests.xcconfig"; path = "Pods/Pods-NoBuSlate AcceptanceTests.xcconfig"; sourceTree = "<group>"; };
+		FFEF2CD8B96E471494494856 /* Pods-Acceptance Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acceptance Tests.xcconfig"; path = "Pods/Pods-Acceptance Tests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C95F15D0168A65B6009170B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C95F15D5168A65B6009170B4 /* SenTestingKit.framework in Frameworks */,
-				C95F15D6168A65B6009170B4 /* UIKit.framework in Frameworks */,
-				C95F15D7168A65B6009170B4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C983E4C2168E971D0007CE70 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C983E4C3168E971D0007CE70 /* CoreData.framework in Frameworks */,
-				C983E4C4168E971D0007CE70 /* AudioToolbox.framework in Frameworks */,
-				C983E4C5168E971D0007CE70 /* AVFoundation.framework in Frameworks */,
-				C983E4C6168E971D0007CE70 /* UIKit.framework in Frameworks */,
-				C983E4C7168E971D0007CE70 /* Foundation.framework in Frameworks */,
-				C983E4C8168E971D0007CE70 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9A0BE9F1572D033003A7062 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C9DD67791579E4A70024526D /* CoreData.framework in Frameworks */,
 				C9A7DB2015772B80008899EE /* AudioToolbox.framework in Frameworks */,
+				C92A6F881969FB51008E8DDB /* Crashlytics.framework in Frameworks */,
 				C9794B3B15735A450001286C /* AVFoundation.framework in Frameworks */,
 				C9A0BEA71572D033003A7062 /* UIKit.framework in Frameworks */,
 				C9A0BEA91572D033003A7062 /* Foundation.framework in Frameworks */,
 				C9A0BEAB1572D033003A7062 /* CoreGraphics.framework in Frameworks */,
+				FE1EB642AB794AF695BEF365 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,35 +157,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A0BEC81572D034003A7062 /* SenTestingKit.framework in Frameworks */,
+				C91C382F1969F087009EFD92 /* XCTest.framework in Frameworks */,
 				C9A0BEC91572D034003A7062 /* UIKit.framework in Frameworks */,
 				C9A0BECA1572D034003A7062 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BDF2901969F5A000606103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BDF2941969F5A000606103 /* XCTest.framework in Frameworks */,
+				C9BDF2961969F5A000606103 /* UIKit.framework in Frameworks */,
+				C9BDF2951969F5A000606103 /* Foundation.framework in Frameworks */,
+				E90CECFC56D547E1BD9D28D1 /* libPods-Acceptance Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C95F15D8168A65B6009170B4 /* NoBuSlateApplicationTests */ = {
-			isa = PBXGroup;
-			children = (
-				C95F15DE168A65B6009170B4 /* NoBuSlateApplicationTests.h */,
-				C95F15DF168A65B6009170B4 /* NoBuSlateApplicationTests.m */,
-				C95F15D9168A65B6009170B4 /* Supporting Files */,
-			);
-			path = NoBuSlateApplicationTests;
-			sourceTree = "<group>";
-		};
-		C95F15D9168A65B6009170B4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C95F15DA168A65B6009170B4 /* NoBuSlateApplicationTests-Info.plist */,
-				C95F15DB168A65B6009170B4 /* InfoPlist.strings */,
-				C95F15E1168A65B7009170B4 /* NoBuSlateApplicationTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		C9794B25157333540001286C /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,12 +208,16 @@
 		C9A0BE971572D033003A7062 = {
 			isa = PBXGroup;
 			children = (
+				C9F053351969E9F300F071A8 /* Service Objects */,
 				C9794B25157333540001286C /* External */,
 				C9A0BEAC1572D033003A7062 /* NoBuSlate */,
-				C9A0BECD1572D034003A7062 /* NoBuSlateLogicTests */,
-				C95F15D8168A65B6009170B4 /* NoBuSlateApplicationTests */,
+				C9A0BECD1572D034003A7062 /* NoBuSlate Tests */,
+				C9BDF2971969F5A000606103 /* Acceptance Tests */,
 				C9A0BEA51572D033003A7062 /* Frameworks */,
 				C9A0BEA31572D033003A7062 /* Products */,
+				24F5FD25CC5A4806A542238B /* Pods.xcconfig */,
+				FBC94D77382B49E5884F7C43 /* Pods-NoBuSlate AcceptanceTests.xcconfig */,
+				FFEF2CD8B96E471494494856 /* Pods-Acceptance Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,9 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				C9A0BEA21572D033003A7062 /* NoBuSlate.app */,
-				C9A0BEC61572D034003A7062 /* NoBuSlateLogicTests.octest */,
-				C95F15D4168A65B6009170B4 /* NoBuSlateApplicationTests.octest */,
-				C983E4E1168E971D0007CE70 /* NoBuSlate.app */,
+				C9A0BEC61572D034003A7062 /* NoBuSlate Tests.xctest */,
+				C9BDF2931969F5A000606103 /* Acceptance Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,13 +234,17 @@
 		C9A0BEA51572D033003A7062 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C92A6F871969FB51008E8DDB /* Crashlytics.framework */,
+				C91C382E1969F087009EFD92 /* XCTest.framework */,
 				C9DD67781579E4A70024526D /* CoreData.framework */,
 				C9A7DB1F15772B80008899EE /* AudioToolbox.framework */,
 				C9794B3A15735A450001286C /* AVFoundation.framework */,
 				C9A0BEA61572D033003A7062 /* UIKit.framework */,
 				C9A0BEA81572D033003A7062 /* Foundation.framework */,
 				C9A0BEAA1572D033003A7062 /* CoreGraphics.framework */,
-				C9A0BEC71572D034003A7062 /* SenTestingKit.framework */,
+				7229F158C5D74CAFA5B5D154 /* libPods.a */,
+				000A6EAD827441B49EF0D641 /* libPods-NoBuSlate AcceptanceTests.a */,
+				9549FC6CC0AF47A2BE472176 /* libPods-Acceptance Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,6 +269,7 @@
 		C9A0BEAD1572D033003A7062 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9BDF2A61969F7DF00606103 /* Keys.plist */,
 				C9A0BEAE1572D033003A7062 /* NoBuSlate-Info.plist */,
 				C9A0BEAF1572D033003A7062 /* InfoPlist.strings */,
 				C9A0BEB21572D033003A7062 /* main.m */,
@@ -321,13 +278,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C9A0BECD1572D034003A7062 /* NoBuSlateLogicTests */ = {
+		C9A0BECD1572D034003A7062 /* NoBuSlate Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C9A0BED31572D034003A7062 /* NoBuSlateLogicTests.h */,
-				C9A0BED41572D034003A7062 /* NoBuSlateLogicTests.m */,
+				C9A0BED41572D034003A7062 /* NoBuSlateTests.m */,
 				C9A0BECE1572D034003A7062 /* Supporting Files */,
 			);
+			name = "NoBuSlate Tests";
 			path = NoBuSlateLogicTests;
 			sourceTree = "<group>";
 		};
@@ -364,52 +321,48 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		C9BDF2971969F5A000606103 /* Acceptance Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C9BDF2981969F5A000606103 /* Supporting Files */,
+				C9BDF29D1969F5A000606103 /* AcceptanceTests.m */,
+				C92A6F8A196A0DEF008E8DDB /* KIFUITestActor+NoBuSlate.h */,
+				C92A6F8B196A0DEF008E8DDB /* KIFUITestActor+NoBuSlate.m */,
+			);
+			path = "Acceptance Tests";
+			sourceTree = "<group>";
+		};
+		C9BDF2981969F5A000606103 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9BDF2991969F5A000606103 /* Acceptance Tests-Info.plist */,
+				C9BDF29A1969F5A000606103 /* InfoPlist.strings */,
+				C9BDF29F1969F5A000606103 /* Acceptance Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9F053351969E9F300F071A8 /* Service Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Service Objects";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C95F15D3168A65B6009170B4 /* NoBuSlateApplicationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C95F15E2168A65B7009170B4 /* Build configuration list for PBXNativeTarget "NoBuSlateApplicationTests" */;
-			buildPhases = (
-				C95F15CF168A65B6009170B4 /* Sources */,
-				C95F15D0168A65B6009170B4 /* Frameworks */,
-				C95F15D1168A65B6009170B4 /* Resources */,
-				C95F15D2168A65B6009170B4 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C95F160C168A6715009170B4 /* PBXTargetDependency */,
-			);
-			name = NoBuSlateApplicationTests;
-			productName = NoBuSlateApplicationTests;
-			productReference = C95F15D4168A65B6009170B4 /* NoBuSlateApplicationTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-		C983E4BA168E971D0007CE70 /* AppStore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C983E4DE168E971D0007CE70 /* Build configuration list for PBXNativeTarget "AppStore" */;
-			buildPhases = (
-				C983E4BB168E971D0007CE70 /* Sources */,
-				C983E4C2168E971D0007CE70 /* Frameworks */,
-				C983E4C9168E971D0007CE70 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AppStore;
-			productName = NoBuSlate;
-			productReference = C983E4E1168E971D0007CE70 /* NoBuSlate.app */;
-			productType = "com.apple.product-type.application";
-		};
 		C9A0BEA11572D033003A7062 /* NoBuSlate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9A0BED81572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlate" */;
 			buildPhases = (
+				FE286158D26B491CB6D5611B /* Check Pods Manifest.lock */,
 				C9A0BE9E1572D033003A7062 /* Sources */,
 				C9A0BE9F1572D033003A7062 /* Frameworks */,
 				C9A0BEA01572D033003A7062 /* Resources */,
+				18F70D3B7AE44CAC8FA22C27 /* Copy Pods Resources */,
+				C92A6F861969FB08008E8DDB /* ShellScript */,
+				C9B2860B196A1DC800273BAF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -420,9 +373,9 @@
 			productReference = C9A0BEA21572D033003A7062 /* NoBuSlate.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C9A0BEC51572D034003A7062 /* NoBuSlateLogicTests */ = {
+		C9A0BEC51572D034003A7062 /* NoBuSlate Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlateLogicTests" */;
+			buildConfigurationList = C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlate Tests" */;
 			buildPhases = (
 				C9A0BEC11572D034003A7062 /* Sources */,
 				C9A0BEC21572D034003A7062 /* Frameworks */,
@@ -434,10 +387,30 @@
 			dependencies = (
 				C9A0BECC1572D034003A7062 /* PBXTargetDependency */,
 			);
-			name = NoBuSlateLogicTests;
+			name = "NoBuSlate Tests";
 			productName = NoBuSlateTests;
-			productReference = C9A0BEC61572D034003A7062 /* NoBuSlateLogicTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = C9A0BEC61572D034003A7062 /* NoBuSlate Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9BDF2921969F5A000606103 /* Acceptance Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BDF2A21969F5A000606103 /* Build configuration list for PBXNativeTarget "Acceptance Tests" */;
+			buildPhases = (
+				AA1C3BA7FEEF4A8FB8CC755C /* Check Pods Manifest.lock */,
+				C9BDF28F1969F5A000606103 /* Sources */,
+				C9BDF2901969F5A000606103 /* Frameworks */,
+				C9BDF2911969F5A000606103 /* Resources */,
+				743FCF5BD0B44968ADC909C7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9BDF2A11969F5A000606103 /* PBXTargetDependency */,
+			);
+			name = "Acceptance Tests";
+			productName = "Acceptance Tests";
+			productReference = C9BDF2931969F5A000606103 /* Acceptance Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -445,7 +418,13 @@
 		C9A0BE991572D033003A7062 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					C9BDF2921969F5A000606103 = {
+						TestTargetID = C9A0BEA11572D033003A7062;
+					};
+				};
 			};
 			buildConfigurationList = C9A0BE9C1572D033003A7062 /* Build configuration list for PBXProject "NoBuSlate" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -460,56 +439,20 @@
 			projectRoot = "";
 			targets = (
 				C9A0BEA11572D033003A7062 /* NoBuSlate */,
-				C9A0BEC51572D034003A7062 /* NoBuSlateLogicTests */,
-				C95F15D3168A65B6009170B4 /* NoBuSlateApplicationTests */,
-				C983E4BA168E971D0007CE70 /* AppStore */,
+				C9A0BEC51572D034003A7062 /* NoBuSlate Tests */,
+				C9BDF2921969F5A000606103 /* Acceptance Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C95F15D1168A65B6009170B4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C95F15DD168A65B6009170B4 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C983E4C9168E971D0007CE70 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C983E4CA168E971D0007CE70 /* InfoPlist.strings in Resources */,
-				C983E4CB168E971D0007CE70 /* MainStoryboard_iPhone.storyboard in Resources */,
-				C983E4CC168E971D0007CE70 /* MainStoryboard_iPad.storyboard in Resources */,
-				C983E4CD168E971D0007CE70 /* countdown-finished.wav in Resources */,
-				C983E4CE168E971D0007CE70 /* countdown-pulse.wav in Resources */,
-				C983E4CF168E971D0007CE70 /* Icon-72.png in Resources */,
-				C983E4D0168E971D0007CE70 /* Icon-Small-50.png in Resources */,
-				C983E4D1168E971D0007CE70 /* Icon-Small-50@2x.png in Resources */,
-				C983E4D2168E971D0007CE70 /* Icon-Small.png in Resources */,
-				C983E4D3168E971D0007CE70 /* Icon.png in Resources */,
-				C983E4D4168E971D0007CE70 /* Icon@2x.png in Resources */,
-				C983E4D5168E971D0007CE70 /* iTunesArtwork.png in Resources */,
-				C983E4D6168E971D0007CE70 /* iTunesArtwork@2x.png in Resources */,
-				C983E4D7168E971D0007CE70 /* Default-568h@2x.png in Resources */,
-				C983E4D8168E971D0007CE70 /* Default-Landscape.png in Resources */,
-				C983E4D9168E971D0007CE70 /* Default-Landscape@2x.png in Resources */,
-				C983E4DA168E971D0007CE70 /* Default-Portrait.png in Resources */,
-				C983E4DB168E971D0007CE70 /* Default-Portrait@2x.png in Resources */,
-				C983E4DC168E971D0007CE70 /* Default.png in Resources */,
-				C983E4DD168E971D0007CE70 /* Default@2x.png in Resources */,
-				C983E4E8168E9E870007CE70 /* Icon-Small@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9A0BEA01572D033003A7062 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C9A0BEB11572D033003A7062 /* InfoPlist.strings in Resources */,
 				C9A0BEBA1572D033003A7062 /* MainStoryboard_iPhone.storyboard in Resources */,
+				C9BDF2A71969F7DF00606103 /* Keys.plist in Resources */,
 				C9A0BEBD1572D033003A7062 /* MainStoryboard_iPad.storyboard in Resources */,
 				C9A7DB2615773B83008899EE /* countdown-finished.wav in Resources */,
 				C9A7DB2815773B9D008899EE /* countdown-pulse.wav in Resources */,
@@ -540,10 +483,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9BDF2911969F5A000606103 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BDF29C1969F5A000606103 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C95F15D2168A65B6009170B4 /* ShellScript */ = {
+		18F70D3B7AE44CAC8FA22C27 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		743FCF5BD0B44968ADC909C7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Acceptance Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA1C3BA7FEEF4A8FB8CC755C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C92A6F861969FB08008E8DDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -554,7 +550,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "./Crashlytics.framework/run 72ff47ed2034e381460fc3648f76121089c2c96e 3862e9a311030508f98b2a2e3e04ccbd642c3b3a9d7a3b9dd17b18576dca2967";
 		};
 		C9A0BEC41572D034003A7062 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -569,30 +565,37 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		C9B2860B196A1DC800273BAF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# xcode-build-bump.sh\n# @desc Auto-increment the build number every time the project is run.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		FE286158D26B491CB6D5611B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C95F15CF168A65B6009170B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C95F15E0168A65B6009170B4 /* NoBuSlateApplicationTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C983E4BB168E971D0007CE70 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C983E4BC168E971D0007CE70 /* main.m in Sources */,
-				C983E4BD168E971D0007CE70 /* AppDelegate.m in Sources */,
-				C983E4BE168E971D0007CE70 /* ViewController.m in Sources */,
-				C983E4BF168E971D0007CE70 /* NSTimer+Blocks.m in Sources */,
-				C983E4C0168E971D0007CE70 /* NoBuSlate.xcdatamodeld in Sources */,
-				C983E4C1168E971D0007CE70 /* SlateState.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9A0BE9E1572D033003A7062 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,34 +613,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A0BED51572D034003A7062 /* NoBuSlateLogicTests.m in Sources */,
+				C9A0BED51572D034003A7062 /* NoBuSlateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BDF28F1969F5A000606103 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92A6F8C196A0DEF008E8DDB /* KIFUITestActor+NoBuSlate.m in Sources */,
+				C9BDF29E1969F5A000606103 /* AcceptanceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C95F160C168A6715009170B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9A0BEA11572D033003A7062 /* NoBuSlate */;
-			targetProxy = C95F160B168A6715009170B4 /* PBXContainerItemProxy */;
-		};
 		C9A0BECC1572D034003A7062 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9A0BEA11572D033003A7062 /* NoBuSlate */;
 			targetProxy = C9A0BECB1572D034003A7062 /* PBXContainerItemProxy */;
 		};
+		C9BDF2A11969F5A000606103 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9A0BEA11572D033003A7062 /* NoBuSlate */;
+			targetProxy = C9BDF2A01969F5A000606103 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C95F15DB168A65B6009170B4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C95F15DC168A65B6009170B4 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		C9A0BEAF1572D033003A7062 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -670,93 +674,28 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		C9BDF29A1969F5A000606103 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9BDF29B1969F5A000606103 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C95F15E3168A65B7009170B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Prefix.pch";
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		C95F15E4168A65B7009170B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Prefix.pch";
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "NoBuSlateApplicationTests/NoBuSlateApplicationTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-		C983E4DF168E971D0007CE70 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew McKenna";
-				CURRENT_PROJECT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
-				INFOPLIST_FILE = "NoBuSlate/NoBuSlate-Info.plist";
-				PRODUCT_NAME = NoBuSlate;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DD704A10-DEAC-4CE9-BC73-69CA698AF283";
-				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		C983E4E0168E971D0007CE70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew McKenna";
-				CURRENT_PROJECT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
-				INFOPLIST_FILE = "NoBuSlate/NoBuSlate-Info.plist";
-				PRODUCT_NAME = NoBuSlate;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DD704A10-DEAC-4CE9-BC73-69CA698AF283";
-				VALIDATE_PRODUCT = NO;
-				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		C9A0BED61572D034003A7062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -768,10 +707,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -781,16 +725,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -800,10 +753,20 @@
 		};
 		C9A0BED91572D034003A7062 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24F5FD25CC5A4806A542238B /* Pods.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TRACKING=1",
+				);
 				INFOPLIST_FILE = "NoBuSlate/NoBuSlate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -813,10 +776,20 @@
 		};
 		C9A0BEDA1572D034003A7062 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24F5FD25CC5A4806A542238B /* Pods.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TRACKING=1",
+				);
 				INFOPLIST_FILE = "NoBuSlate/NoBuSlate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -830,14 +803,14 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
 				INFOPLIST_FILE = "NoBuSlateLogicTests/NoBuSlateTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -847,38 +820,79 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoBuSlate/NoBuSlate-Prefix.pch";
 				INFOPLIST_FILE = "NoBuSlateLogicTests/NoBuSlateTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		C9BDF2A31969F5A000606103 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFEF2CD8B96E471494494856 /* Pods-Acceptance Tests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Acceptance Tests/Acceptance Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Acceptance Tests/Acceptance Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9BDF2A41969F5A000606103 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFEF2CD8B96E471494494856 /* Pods-Acceptance Tests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NoBuSlate.app/NoBuSlate";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Acceptance Tests/Acceptance Tests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Acceptance Tests/Acceptance Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C95F15E2168A65B7009170B4 /* Build configuration list for PBXNativeTarget "NoBuSlateApplicationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C95F15E3168A65B7009170B4 /* Debug */,
-				C95F15E4168A65B7009170B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C983E4DE168E971D0007CE70 /* Build configuration list for PBXNativeTarget "AppStore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C983E4DF168E971D0007CE70 /* Debug */,
-				C983E4E0168E971D0007CE70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C9A0BE9C1572D033003A7062 /* Build configuration list for PBXProject "NoBuSlate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -897,11 +911,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlateLogicTests" */ = {
+		C9A0BEDB1572D034003A7062 /* Build configuration list for PBXNativeTarget "NoBuSlate Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9A0BEDC1572D034003A7062 /* Debug */,
 				C9A0BEDD1572D034003A7062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BDF2A21969F5A000606103 /* Build configuration list for PBXNativeTarget "Acceptance Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BDF2A31969F5A000606103 /* Debug */,
+				C9BDF2A41969F5A000606103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

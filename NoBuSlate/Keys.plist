@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Crashlytics</key>
+	<string>72ff47ed2034e381460fc3648f76121089c2c96e</string>
+	<key>TestFlight</key>
+	<string>a902883a-f21d-4e3c-bde4-ec5fa8957474</string>
+	<key>Flurry</key>
+	<string>2BHGHB9FJTFNS7Y3T96Z</string>
+</dict>
+</plist>

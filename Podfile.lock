@@ -1,0 +1,17 @@
+PODS:
+  - FlurrySDK (5.1.0):
+    - FlurrySDK/FlurrySDK
+  - FlurrySDK/FlurrySDK (5.1.0)
+  - KIF (3.0.6):
+    - KIF/XCTest
+  - KIF/XCTest (3.0.6)
+
+DEPENDENCIES:
+  - FlurrySDK
+  - KIF (~> 3.0)
+
+SPEC CHECKSUMS:
+  FlurrySDK: 4fe2cfdae2a9f590f3c4d7bb29427a7ce1a16b49
+  KIF: 7fcc68436ffda73749885a68b998fdac7bf6f9f4
+
+COCOAPODS: 0.33.1

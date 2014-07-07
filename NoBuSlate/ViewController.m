@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  NoBuSlate
-//
-//  Created by Matthew McKenna on 5/27/12.
-//  Copyright (c) 2012 Matthew McKenna. All rights reserved.
-//
-
 #import "ViewController.h"
 #import "NSTimer+Blocks.h"
 #import "SlateState.h"

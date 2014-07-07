@@ -1,11 +1,3 @@
-//
-//  ViewController.h
-//  NoBuSlate
-//
-//  Created by Matthew McKenna on 5/27/12.
-//  Copyright (c) 2012 Matthew McKenna. All rights reserved.
-//
-
 @class SlateState;
 
 #import <UIKit/UIKit.h>
