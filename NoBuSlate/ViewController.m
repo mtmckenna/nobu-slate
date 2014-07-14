@@ -72,7 +72,7 @@ static int letterCount;
     };
     
     self.countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 
-                                                            block:countdownBlock 
+                                                            block:countdownBlock
                                                           repeats:YES];
     
     [self setColorsWithBackgroundColor:[UIColor blackColor] 
@@ -258,7 +258,7 @@ static int letterCount;
     // Else use the next letter in the alphabet
     else
     {
-        NSString *lastCharacterString = [aString substringFromIndex:[aString length] - 1];
+        NSString *lastCharacterString = [[aString substringFromIndex:[aString length] - 1] uppercaseString]            ;
         int currentIndex = [sceneAlphabet indexOfObject:lastCharacterString];
         
         // Number of complete trips across the alphabet
@@ -406,9 +406,10 @@ static int letterCount;
     }
     else if (touchedView == audioFileNameView)
     {
-        // TODO: add ability to parse field with file extension
-        int fileNumber = [self.slateState.audioFileName intValue] + 1;
-        self.slateState.audioFileName = [NSString stringWithFormat:@"%03d", fileNumber];
+        NSString *newAudioFileString = [self sceneString:self.slateState.audioFileName
+                                    incrementedByInteger:1];
+
+        self.slateState.audioFileName = newAudioFileString;
         [self updateAudioFileName];
     }
 }
@@ -436,8 +437,10 @@ static int letterCount;
     }
     else if (touchedView == audioFileNameView)
     {
-        int fileNumber = [self.slateState.audioFileName intValue] - 1;
-        self.slateState.audioFileName = [NSString stringWithFormat:@"%03d", fileNumber];
+        NSString *newAudioFileString = [self sceneString:self.slateState.audioFileName
+                                    incrementedByInteger:-1];
+
+        self.slateState.audioFileName = newAudioFileString;
         [self updateAudioFileName];
     }
 }
@@ -537,7 +540,6 @@ static int letterCount;
     audioRightChannelField.delegate = self;
     self.countdownDurationInSeconds = 1;
     sceneStringField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
-    audioFileNameField.keyboardType = UIKeyboardTypeNumberPad;
     takeNumberField.keyboardType = UIKeyboardTypeNumberPad;
     [self configureNumberPadAccessoryView];
         
