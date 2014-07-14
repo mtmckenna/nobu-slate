@@ -28,12 +28,12 @@ AVAudioPlayer *audioPlayerFinished;
     // TODO: handle error
 
     // Countdown up ping sounds
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"countdown-pulse" ofType: @"wav"];
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"countdown-pulse-2" ofType: @"wav"];
     NSURL *fileUrl = [[NSURL alloc] initFileURLWithPath:soundFilePath];
     audioPlayerPulse = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:nil];
 
     // "Go" ping sound
-    soundFilePath = [[NSBundle mainBundle] pathForResource: @"countdown-finished" ofType: @"wav"];
+    soundFilePath = [[NSBundle mainBundle] pathForResource: @"countdown-finished-2" ofType: @"wav"];
     fileUrl = [[NSURL alloc] initFileURLWithPath:soundFilePath];
     audioPlayerFinished = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:nil];
 
@@ -84,22 +84,42 @@ AVAudioPlayer *audioPlayerFinished;
     [self.delegate performSelector:@selector(didPlayAudioOfType:) withObject:audioType];
 }
 
-
 + (void)configureAudio
 {
     [self playAudioEvenWhenMuted];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+
+    NSError *error;
+    BOOL success = [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
+    if(!success)
+    {
+        NSLog(@"error doing outputaudioportoverride - %@", [error localizedDescription]);
+    }
 }
 
 + (void)playAudioEvenWhenMuted
 {
     NSError *setCategoryErr = nil;
     NSError *activationErr  = nil;
+    NSError *audioPortErr  = nil;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&setCategoryErr];
     [[AVAudioSession sharedInstance] setActive:YES error:&activationErr];
+    [[AVAudioSession sharedInstance] overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&audioPortErr];
 
-    if(setCategoryErr || activationErr)
+    if(setCategoryErr || activationErr || audioPortErr)
     {
-        NSLog(@"%@ Error: Could not activate silence mode. %@ %@", self, setCategoryErr, activationErr);
+        NSLog(@"%@ Error: Could not activate silence mode. %@ %@ %@", self, setCategoryErr, activationErr, audioPortErr);
     }
+
+    UInt32 doChangeDefaultRoute = 1;
+
+    AudioSessionSetProperty (
+                             kAudioSessionProperty_OverrideCategoryDefaultToSpeaker,
+                             sizeof (doChangeDefaultRoute),
+                             &doChangeDefaultRoute
+                             );
+
+//    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+//    AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(audioRouteOverride), &audioRouteOverride);
 }
 @end

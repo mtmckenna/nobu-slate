@@ -45,7 +45,6 @@
 		C9AFC199168A538300546125 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC192168A538300546125 /* Icon.png */; };
 		C9AFC19A168A538300546125 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC193168A538300546125 /* Icon@2x.png */; };
 		C9AFC19B168A538300546125 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AFC194168A538300546125 /* iTunesArtwork.png */; };
-		C9B2860E196A421D00273BAF /* AudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B2860D196A421D00273BAF /* AudioHelper.m */; };
 		C9B28613196A4FDA00273BAF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B28612196A4FDA00273BAF /* Constants.m */; };
 		C9BDF2941969F5A000606103 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91C382E1969F087009EFD92 /* XCTest.framework */; };
 		C9BDF2951969F5A000606103 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A0BEA81572D033003A7062 /* Foundation.framework */; };
@@ -55,6 +54,9 @@
 		C9BDF2A71969F7DF00606103 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BDF2A61969F7DF00606103 /* Keys.plist */; };
 		C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D340D3157C86C900F8D0E4 /* SlateState.m */; };
 		C9DD67791579E4A70024526D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DD67781579E4A70024526D /* CoreData.framework */; };
+		C9E2720E19724BCA00269990 /* AudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E2720D19724BCA00269990 /* AudioHelper.m */; };
+		C9E2721019724E9400269990 /* countdown-finished-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9E2720F19724E9400269990 /* countdown-finished-2.wav */; };
+		C9E2721219737B3B00269990 /* countdown-pulse-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9E2721119737B3B00269990 /* countdown-pulse-2.wav */; };
 		E90CECFC56D547E1BD9D28D1 /* libPods-Acceptance Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9549FC6CC0AF47A2BE472176 /* libPods-Acceptance Tests.a */; };
 		FE1EB642AB794AF695BEF365 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7229F158C5D74CAFA5B5D154 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -126,8 +128,6 @@
 		C9AFC192168A538300546125 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C9AFC193168A538300546125 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C9AFC194168A538300546125 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		C9B2860C196A421D00273BAF /* AudioHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioHelper.h; sourceTree = "<group>"; };
-		C9B2860D196A421D00273BAF /* AudioHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioHelper.m; sourceTree = "<group>"; };
 		C9B28611196A4F0800273BAF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		C9B28612196A4FDA00273BAF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C9BDF2931969F5A000606103 /* Acceptance Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acceptance Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +139,10 @@
 		C9D340D2157C86C900F8D0E4 /* SlateState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlateState.h; sourceTree = "<group>"; };
 		C9D340D3157C86C900F8D0E4 /* SlateState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlateState.m; sourceTree = "<group>"; };
 		C9DD67781579E4A70024526D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C9E2720C19724BCA00269990 /* AudioHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioHelper.h; path = NoBuSlate/AudioHelper.h; sourceTree = "<group>"; };
+		C9E2720D19724BCA00269990 /* AudioHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioHelper.m; path = NoBuSlate/AudioHelper.m; sourceTree = "<group>"; };
+		C9E2720F19724E9400269990 /* countdown-finished-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-finished-2.wav"; sourceTree = "<group>"; };
+		C9E2721119737B3B00269990 /* countdown-pulse-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "countdown-pulse-2.wav"; sourceTree = "<group>"; };
 		FBC94D77382B49E5884F7C43 /* Pods-NoBuSlate AcceptanceTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoBuSlate AcceptanceTests.xcconfig"; path = "Pods/Pods-NoBuSlate AcceptanceTests.xcconfig"; sourceTree = "<group>"; };
 		FFEF2CD8B96E471494494856 /* Pods-Acceptance Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acceptance Tests.xcconfig"; path = "Pods/Pods-Acceptance Tests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +210,8 @@
 				C9AFC18D168A538300546125 /* Images */,
 				C9A7DB2715773B9D008899EE /* countdown-pulse.wav */,
 				C9A7DB2515773B83008899EE /* countdown-finished.wav */,
+				C9E2721119737B3B00269990 /* countdown-pulse-2.wav */,
+				C9E2720F19724E9400269990 /* countdown-finished-2.wav */,
 				C9794B3C157361080001286C /* NoBuSlate.xcdatamodeld */,
 			);
 			name = Resources;
@@ -353,8 +359,8 @@
 		C9F053351969E9F300F071A8 /* Service Objects */ = {
 			isa = PBXGroup;
 			children = (
-				C9B2860C196A421D00273BAF /* AudioHelper.h */,
-				C9B2860D196A421D00273BAF /* AudioHelper.m */,
+				C9E2720C19724BCA00269990 /* AudioHelper.h */,
+				C9E2720D19724BCA00269990 /* AudioHelper.m */,
 			);
 			name = "Service Objects";
 			sourceTree = "<group>";
@@ -431,6 +437,9 @@
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
+					C9A0BEA11572D033003A7062 = {
+						DevelopmentTeam = TG65YZY6G7;
+					};
 					C9BDF2921969F5A000606103 = {
 						TestTargetID = C9A0BEA11572D033003A7062;
 					};
@@ -475,9 +484,11 @@
 				C9AFC19B168A538300546125 /* iTunesArtwork.png in Resources */,
 				C95F1616168D2A49009170B4 /* iTunesArtwork@2x.png in Resources */,
 				C95F161F168D7CBA009170B4 /* Default-568h@2x.png in Resources */,
+				C9E2721219737B3B00269990 /* countdown-pulse-2.wav in Resources */,
 				C95F1620168D7CBA009170B4 /* Default-Landscape.png in Resources */,
 				C95F1621168D7CBA009170B4 /* Default-Landscape@2x.png in Resources */,
 				C95F1622168D7CBA009170B4 /* Default-Portrait.png in Resources */,
+				C9E2721019724E9400269990 /* countdown-finished-2.wav in Resources */,
 				C95F1623168D7CBA009170B4 /* Default-Portrait@2x.png in Resources */,
 				C95F1624168D7CBA009170B4 /* Default.png in Resources */,
 				C95F1625168D7CBA009170B4 /* Default@2x.png in Resources */,
@@ -612,11 +623,11 @@
 			files = (
 				C9A0BEB31572D033003A7062 /* main.m in Sources */,
 				C9A0BEB71572D033003A7062 /* AppDelegate.m in Sources */,
+				C9E2720E19724BCA00269990 /* AudioHelper.m in Sources */,
 				C9A0BEC01572D034003A7062 /* ViewController.m in Sources */,
 				C9B28613196A4FDA00273BAF /* Constants.m in Sources */,
 				C9794B2C157333860001286C /* NSTimer+Blocks.m in Sources */,
 				C92921A8157C71430016C828 /* NoBuSlate.xcdatamodeld in Sources */,
-				C9B2860E196A421D00273BAF /* AudioHelper.m in Sources */,
 				C9D340D4157C86C900F8D0E4 /* SlateState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,6 +778,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F5FD25CC5A4806A542238B /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -781,6 +794,7 @@
 				);
 				INFOPLIST_FILE = "NoBuSlate/NoBuSlate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -790,6 +804,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24F5FD25CC5A4806A542238B /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -804,6 +820,7 @@
 				);
 				INFOPLIST_FILE = "NoBuSlate/NoBuSlate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
