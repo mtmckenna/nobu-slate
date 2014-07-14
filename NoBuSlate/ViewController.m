@@ -47,7 +47,7 @@ static int letterCount;
 {   
     int __block currentCountdown = self.countdownDurationInSeconds;
     
-    void (^myBlock)() = ^() {        
+    void (^countdownBlock)() = ^() {
         currentCountdown = currentCountdown - 1;
         
         if ([self.audioHelper isPlaying])
@@ -72,7 +72,7 @@ static int letterCount;
     };
     
     self.countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 
-                                                            block:myBlock 
+                                                            block:countdownBlock 
                                                           repeats:YES];
     
     [self setColorsWithBackgroundColor:[UIColor blackColor] 
