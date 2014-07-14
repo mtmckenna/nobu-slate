@@ -479,7 +479,6 @@ static int letterCount;
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     NSNumber *keybaordShowDuration = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     
-    // TODO: Handle portrait mode
     // Keyboard height
     float offset = kbSize.width;
     
@@ -636,6 +635,11 @@ static int letterCount;
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
