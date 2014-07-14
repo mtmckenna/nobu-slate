@@ -223,6 +223,8 @@ static int letterCount;
 // Case 2 - the scene number ends in a letter
 - (NSString *)sceneString:(NSString *)aString incrementedByInteger:(int)increment
 {
+    if (aString.length == 0) return @"1";
+
     char lastCharacter = [aString characterAtIndex:[aString length] - 1];
     BOOL isDigit = isdigit(lastCharacter);
     

@@ -29,4 +29,23 @@
     [tester swipeViewWithAccessibilityLabel:@"5" inDirection:KIFSwipeDirectionDown];
 }
 
+- (void)testFieldsCanHandleHavingNoInput
+{
+    [tester clearTextFromAndThenEnterText:@"" intoViewWithAccessibilityLabel:@"Scene"];
+
+    [tester clearTextFromAndThenEnterText:@"" intoViewWithAccessibilityLabel:@"Take"];
+
+    [tester clearTextFromAndThenEnterText:@"" intoViewWithAccessibilityLabel:@"Left Channel"];
+
+    [tester clearTextFromAndThenEnterText:@"" intoViewWithAccessibilityLabel:@"Right Channel"];
+
+    [tester clearTextFromAndThenEnterText:@"" intoViewWithAccessibilityLabel:@"Audio File"];
+
+    [tester swipeViewWithAccessibilityLabel:@"Scene" inDirection:KIFSwipeDirectionDown];
+    [tester swipeViewWithAccessibilityLabel:@"Take" inDirection:KIFSwipeDirectionDown];
+    [tester swipeViewWithAccessibilityLabel:@"Left Channel" inDirection:KIFSwipeDirectionDown];
+    [tester swipeViewWithAccessibilityLabel:@"Right Channel" inDirection:KIFSwipeDirectionDown];
+    [tester swipeViewWithAccessibilityLabel:@"Audio File" inDirection:KIFSwipeDirectionDown];
+}
+
 @end
